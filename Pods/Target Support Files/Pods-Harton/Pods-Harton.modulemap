@@ -1,0 +1,6 @@
+framework module Pods_Harton {
+  umbrella header "Pods-Harton-umbrella.h"
+
+  export *
+  module * { export * }
+}
