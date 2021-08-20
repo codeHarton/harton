@@ -8,13 +8,17 @@
 import UIKit
 /**
  沙盒系统
- iOS中的沙盒机制是一种安全体系。为了保证系统安全，iOS每个应用程序在安装时，会创建属于自己的沙盒文件（存储空间）。应用程序只能访问自身的沙盒文件，不能访问其他应用程序的沙盒文件，当应用程序需要向外部请求或接收数据时，都需要经过权限认证，否则，无法获取到数据。所有的非代码文件都要保存在此，例如属性文件plist、文本文件、图像、图标、媒体资源等，其原理是通过重定向技术，把程序生成和修改的文件定向到自身文件夹中。
+ Documents:保存应用运行时生成的需要持久化的数据，iTunes会自动备份该目录
+ tmp:保存应用运行时所需的临时数据，使用完毕后再将相应的文件从该目录删除，应用没有运行时，系统也可能会自动清理该目录下的文件，iTunes不会同步该目录，iPhone重启时该目录下的文件会丢失。
+ Libaray:存储程序的默认设置和其他状态信息，iTunes会自动备份该目录。
+ Libaray/Caches：存放缓存文件，iTunes不会备份此目录，此目录下文件不会在应用退出删除，一般存放体积比较大，不是很重要的资源
+ Libaray/Preferences:保存应用的所有偏好设置，ios的Settings（设置）应用会在该目录中查找应用的设置信息，iTunes会自动备份该目录。
  */
 class SandBoxViewController: BaseViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -63,7 +67,7 @@ class SandBoxViewController: BaseViewController {
     
     /**
      临时文件夹(系统会不定期删除里面的文件)
-
+     
      // 获取tmp目录路径
      NSString *tmpDir = NSTemporaryDirectory();
      临时数据应该保存在/tmp目录。
@@ -80,5 +84,5 @@ class SandBoxViewController: BaseViewController {
     func systemData() ->SandBoxViewController{
         return self
     }
-
+    
 }

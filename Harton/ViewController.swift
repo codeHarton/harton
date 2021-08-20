@@ -9,6 +9,9 @@ import UIKit
 
 import RxCocoa
 import RxSwift
+import Then
+import NSObject_Rx
+import RxDataSources
 class ViewController: BaseViewController {
     
     struct Item {
@@ -21,12 +24,13 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        
         // Do any additional setup after loading the view.
     }
     
     private func setupTableView(){
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        Observable.just([Item(name: "沙盒", type: SandBoxViewController.self)]).bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)){ row, ele, cell in
+        Observable.just([Item(name: "沙盒", type: SandBoxViewController.self),Item(name: "ISA指针", type: IsaViewController.self),Item(name: "数据库", type: DataBaseViewController.self),Item(name: "AsyncDisplayKit", type: TextureViewController.self)]).bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)){ row, ele, cell in
             print("row = \(row),ele = \(ele),cell = \(cell)")
             cell.textLabel?.text = ele.name
         }.disposed(by: disposeBag)
@@ -41,11 +45,7 @@ class ViewController: BaseViewController {
             let vc = type.init()
             vc.title = item.element?.name
             self?.navigationController?.pushViewController(vc, animated: true)
-        }.disposed(by: disposeBag)
+        }.disposed(by: rx.disposeBag)
     }
-    
-    
-
-
 }
 

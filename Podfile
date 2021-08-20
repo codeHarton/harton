@@ -24,4 +24,6 @@ pod 'Moya'
   pod 'RxSwift'
   pod 'RxDataSources'
   pod 'Then'
+  pod 'Texture'
+  pod 'IGListKit'
 end
