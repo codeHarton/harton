@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.0)
+  - Alamofire (5.4.3)
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
@@ -18,10 +18,11 @@ PODS:
   - MMKV (1.2.10):
     - MMKVCore (~> 1.2.10)
   - MMKVCore (1.2.10)
-  - Moya (14.0.0):
-    - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
   - PINCache (3.0.3):
@@ -99,6 +100,21 @@ PODS:
   - Texture/Video (3.0.0):
     - Texture/Core
   - Then (2.7.0)
+  - YYAsyncLayer (1.0)
+  - YYCache (1.0.4)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+  - YYDispatchQueuePool (1.0)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYKeyboardManager (1.0.1)
+  - YYModel (1.0.4)
+  - YYText (1.0.7)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - Charts
@@ -108,7 +124,7 @@ DEPENDENCIES:
   - IGListKit
   - Kingfisher
   - MMKV
-  - Moya
+  - Moya/RxSwift (~> 14.0)
   - "NSObject+Rx"
   - pop
   - RxCocoa
@@ -120,6 +136,15 @@ DEPENDENCIES:
   - SwifterSwift
   - Texture
   - Then
+  - YYAsyncLayer
+  - YYCache
+  - YYCategories
+  - YYDispatchQueuePool
+  - YYImage
+  - YYKeyboardManager
+  - YYModel
+  - YYText
+  - YYWebImage
 
 SPEC REPOS:
   trunk:
@@ -150,9 +175,18 @@ SPEC REPOS:
     - SwifterSwift
     - Texture
     - Then
+    - YYAsyncLayer
+    - YYCache
+    - YYCategories
+    - YYDispatchQueuePool
+    - YYImage
+    - YYKeyboardManager
+    - YYModel
+    - YYText
+    - YYWebImage
 
 SPEC CHECKSUMS:
-  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   CryptoSwift: 01b0f0cba1d5c212e5a335ff6c054fb75a204f00
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
@@ -179,7 +213,16 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   Texture: 2f109e937850d94d1d07232041c9c7313ccddb81
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+  YYDispatchQueuePool: 3dfb2274bcc74207688dde8ac6f7bdd46871dd7b
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYKeyboardManager: ff53d2e80d1808567a7f004028bd200d9469a89f
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 05e3a03f7aa90b9d41fd275c9e94856e9263f441
+PODFILE CHECKSUM: 9d59744979ccd111b7d61e14a1ae6605c12ebffe
 
 COCOAPODS: 1.10.1

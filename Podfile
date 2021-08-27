@@ -6,7 +6,7 @@ target 'Harton' do
   use_frameworks!
 
   # Pods for Harton
-pod 'Moya'
+  pod 'Moya/RxSwift', '~> 14.0'
   pod 'SSZipArchive'
   pod 'SwifterSwift'
   pod 'HandyJSON'
@@ -26,4 +26,15 @@ pod 'Moya'
   pod 'Then'
   pod 'Texture'
   pod 'IGListKit'
+  
+  pod 'YYModel'
+  pod 'YYCache'
+  pod 'YYImage'
+  pod 'YYWebImage'
+  pod 'YYText'
+  pod 'YYKeyboardManager'
+  pod 'YYDispatchQueuePool'
+  pod 'YYAsyncLayer'
+  pod 'YYCategories'
+
 end
