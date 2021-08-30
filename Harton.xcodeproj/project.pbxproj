@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187D91B326DD133D00C1D903 /* BigLottoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187D91B226DD133D00C1D903 /* BigLottoController.swift */; };
 		AB920695194E05E3BBB7B7F5 /* Pods_Harton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8FDEA4D3AA3B7BDB5D951C /* Pods_Harton.framework */; };
 		F41AA3B626D8BA42000F8A2E /* LogExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AA3B526D8BA42000F8A2E /* LogExtension.swift */; };
 		F41AA3BD26D8C833000F8A2E /* Response+HandyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AA3B826D8C833000F8A2E /* Response+HandyJson.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187D91B226DD133D00C1D903 /* BigLottoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLottoController.swift; sourceTree = "<group>"; };
 		34228D4CCE792FC5B9CD84EE /* Pods-Harton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Harton.debug.xcconfig"; path = "Target Support Files/Pods-Harton/Pods-Harton.debug.xcconfig"; sourceTree = "<group>"; };
 		3B8FDEA4D3AA3B7BDB5D951C /* Pods_Harton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Harton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BFB4FE0F79657B08B3A358 /* Pods-Harton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Harton.release.xcconfig"; path = "Target Support Files/Pods-Harton/Pods-Harton.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		187D91B126DD132800C1D903 /* BigLotto */ = {
+			isa = PBXGroup;
+			children = (
+				187D91B226DD133D00C1D903 /* BigLottoController.swift */,
+			);
+			path = BigLotto;
+			sourceTree = "<group>";
+		};
 		3B5E33ACEA27D5AE1EDB2F77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +197,7 @@
 		F45AB1F726CBB0AF005EC202 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				187D91B126DD132800C1D903 /* BigLotto */,
 				F47D509A26DC9042008AC2FF /* Genericity */,
 				F4279AD726D76B8A001FA081 /* Rx */,
 				F4A4408526D35DF600958FF0 /* YY */,
@@ -441,6 +452,7 @@
 				F47D509826DC7F45008AC2FF /* ASExtension.swift in Sources */,
 				F45AB1E626CBAA2E005EC202 /* SceneDelegate.swift in Sources */,
 				F41AA3BD26D8C833000F8A2E /* Response+HandyJson.swift in Sources */,
+				187D91B326DD133D00C1D903 /* BigLottoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
