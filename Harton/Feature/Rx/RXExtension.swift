@@ -17,8 +17,6 @@ extension ObservableType{
     }
 }
 public extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
-    
-    
    
     /// Maps data received from the signal into a JSON object. If the conversion fails, the signal errors.
     func mapObject<T:CustomMappable>(type : T.Type) -> Single<T> {

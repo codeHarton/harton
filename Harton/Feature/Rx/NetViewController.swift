@@ -17,6 +17,7 @@ class NetViewController: BaseViewController {
     
     var dataSource : [Info] = [Info]()
     
+    var page = 2
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -26,12 +27,14 @@ class NetViewController: BaseViewController {
                 return
             }
             self.dataSource = data
-            self.title = response.data?.online_ad_data?.ad_name
+            self.title = response.data?.info?.first?.worksName
             self.tableView.reloadData()
         } onError: { error in
             error.log()
         }.disposed(by: rx.disposeBag)
-
+        
+  
+        
         // Do any additional setup after loading the view.
     }
     
@@ -67,6 +70,30 @@ extension NetViewController : ASTableDelegate,ASTableDataSource{
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func shouldBatchFetch(for tableNode: ASTableNode) -> Bool {
+        return true
+    }
+    
+    func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
+        context.beginBatchFetching()
+        fetchData(context: context)
+    }
+    
+    private func fetchData(context: ASBatchContext){
+        APIProvider.rx.request(MultiTarget(HartonService.getList(params: ["page":self.page]))).mapObject(type: ResponseData<ListModel>.self).subscribe { response in
+            guard let data = response.data?.info else{
+                return
+            }
+            self.page += 1
+            self.dataSource.append(contentsOf: data)
+            self.title = response.data?.info?.first?.worksName
+            context.completeBatchFetching(true)
+            self.tableView.reloadData()
+        } onError: { error in
+            error.log()
+        }.disposed(by: rx.disposeBag)
+    }
 }
 
 
@@ -79,7 +106,7 @@ class NetCellNode: ASCellNode {
 
     lazy var imageView = ASNetworkImageNode()
     
-    lazy var videoCoverImageView = ASNetworkImageNode()
+    lazy var videoCoverImageView = ASNetworkImageNode()//ASNetworkImageNode(cache: ASImageProtocolServcie.getService(), downloader: ASImageProtocolServcie.getService())
 
     
     lazy var videoNode = ASVideoPlayerNode()
@@ -106,26 +133,28 @@ class NetCellNode: ASCellNode {
         imageView.cornerRadius = 30
         
         
+        
         addSubnode(videoCoverImageView)
         videoCoverImageView.url = info.icon_origin
         videoCoverImageView.cornerRadius = 4
         
-        addSubnode(videoNode)
-        videoNode.assetURL = URL(string: "http://testfilebizhi.feihuo.com/video/sourceFile/20190222/448654de455aee18ce0a0d154075133b.mp4")
-        videoNode.gravity = AVLayerVideoGravity.resizeAspectFill.rawValue
+//        addSubnode(videoNode)
+//        videoNode.assetURL = URL(string: "http://testfilebizhi.feihuo.com/video/sourceFile/20190222/448654de455aee18ce0a0d154075133b.mp4")
+//        videoNode.gravity = AVLayerVideoGravity.resizeAspectFill.rawValue
         
     
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let top = ASStackLayoutSpec(direction: .vertical, spacing: 5, justifyContent: .spaceAround, alignItems: .start, flexWrap: .noWrap, alignContent: .stretch, lineSpacing: 10, children: [nickName,type,video_quality])
+        let top = ASStackLayoutSpec(direction: .vertical, spacing: 5, justifyContent: .spaceBetween, alignItems: .start, flexWrap: .noWrap, alignContent: .stretch, lineSpacing: 10, children: [nickName,type,video_quality])
         let infoLayout = ASStackLayoutSpec(direction: .horizontal, spacing: 12, justifyContent: .start, alignItems: .start, children: [imageView,top])
         
         let origin_cover = ASRatioLayoutSpec(ratio: 0.5, child: videoCoverImageView)
         
-        let videoLayout = ASRatioLayoutSpec(ratio: 0.5, child: videoNode)
+       // let videoLayout = ASRatioLayoutSpec(ratio: 0.5, child: videoNode)
 
-        let layout = ASStackLayoutSpec(direction: .vertical, spacing: 10, justifyContent: .start, alignItems: .start, children: [infoLayout,origin_cover,videoLayout])
+        let layout = ASStackLayoutSpec(direction: .vertical, spacing: 10, justifyContent: .start, alignItems: .start, children: [infoLayout,origin_cover])
+        
         return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12), child: layout)
     }
 }

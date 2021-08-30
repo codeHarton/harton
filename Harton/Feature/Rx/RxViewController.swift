@@ -51,6 +51,8 @@ class RxViewController: BaseViewController {
         button.rx.controlEvent(.touchUpInside)._subscribe(onNext: {self.navigationController?.pushViewController(NetViewController(), animated: true)}).disposed(by: rx.disposeBag)
         
         
+        
+        
       
 
 

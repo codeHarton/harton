@@ -12,7 +12,7 @@ enum HartonService {
     ///获取分类列表
     case getCategories
     
-    case getList
+    case getList(params : [String : Any])
     ///检查更新
     case checkUpdate
     
@@ -68,7 +68,8 @@ extension HartonService : TargetType{
         case .checkUpdate:
             return .requestParameters(parameters: ["channel":"appstore"], encoding: URLEncoding.default)
         case let .report(params: params),
-             let .checkFile(params: params):
+             let .checkFile(params: params),
+             let .getList(params: params):
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
         default:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)

@@ -10,5 +10,5 @@ import Moya
 class RxNetViewModel: BaseViewModel {
 
     
-    var loadData = APIProvider.rx.request(MultiTarget(HartonService.getList)).mapObject(type: ResponseData<ListModel>.self)
+    var loadData = APIProvider.rx.request(MultiTarget(HartonService.getList(params: ["page":1]))).mapObject(type: ResponseData<ListModel>.self)
 }
