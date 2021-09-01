@@ -14,9 +14,7 @@ import Kingfisher
 import ProgressHUD
 import RxSwift
 import RxCocoa
-enum Type {
-    case name
-}
+
 extension AnimationType : CustomStringConvertible{
     public var description: String{
         switch self {
@@ -187,9 +185,7 @@ class HUDViewController: BaseViewController {
             resl.resolve("hello", nil)
         }
     }
-    deinit {
-        log()
-    }
+
     
     
     /*
