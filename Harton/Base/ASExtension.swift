@@ -19,10 +19,14 @@ public class ASImageProtocolServcie{
 }
 
 
+extension KingfisherWrapper where Base : UIImageView{
+    
+}
+
 
 public class ASImagePortocolImpl : NSObject,ASImageCacheProtocol,ASImageDownloaderProtocol{
     public func downloadImage(with URL: URL, callbackQueue: DispatchQueue, downloadProgress: ASImageDownloaderProgress?, completion: @escaping ASImageDownloaderCompletion) -> Any? {
-        KingfisherManager.shared.retrieveImage(with: URL) { result in
+        KingfisherManager.shared.retrieveImage(with: URL,options: [.processor(BlackWhiteProcessor())]) { result in
             switch result{
             case let .failure(error):
                 let container = ImageContainer(image: nil, data: nil)
@@ -42,10 +46,9 @@ public class ASImagePortocolImpl : NSObject,ASImageCacheProtocol,ASImageDownload
     }
     
     public func cachedImage(with URL: URL, callbackQueue: DispatchQueue, completion: @escaping ASImageCacherCompletion) {
-        
-        var image = Kingfisher.KingfisherManager.shared.cache.retrieveImageInMemoryCache(forKey: URL.cacheKey)
+        var image = KingfisherManager.shared.cache.retrieveImageInMemoryCache(forKey: URL.cacheKey, options: [.processor(BlackWhiteProcessor())])
         if nil == image {
-            image = KingfisherManager.shared.cache.retrieveImageInDiskCache(forKey: URL.cacheKey)
+            image = KingfisherManager.shared.cache.retrieveImageInDiskCache(forKey: URL.cacheKey,options: [.processor(BlackWhiteProcessor())])
         }
         let container = ImageContainer(image: image, data: nil)
         completion(container,ASImageCacheType.asynchronous)

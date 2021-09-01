@@ -10,23 +10,38 @@ target 'Harton' do
   pod 'SSZipArchive'
   pod 'SwifterSwift'
   pod 'HandyJSON'
-  pod 'MMKV'
   pod 'CryptoSwift'
   pod 'SnapKit'
   pod 'Charts'
   pod 'SAMKeychain'
   pod 'SSZipArchive'
   pod 'pop'
+
+  pod 'Then'
+  
+  #data
   pod 'FMDB'
+  pod 'MMKV'
+
+  
+  #image
   pod 'Kingfisher'
+  pod 'SDWebImage'
+  pod 'SDWebImage/WebP'
+  
+  
+  
+  pod 'Texture'
+  pod 'IGListKit'
+  
+  
+  #RX
   pod 'NSObject+Rx'
   pod 'RxCocoa'
   pod 'RxSwift'
   pod 'RxDataSources'
-  pod 'Then'
-  pod 'Texture'
-  pod 'IGListKit'
   
+  #YYKit
   pod 'YYModel'
   pod 'YYCache'
   pod 'YYImage'
@@ -37,7 +52,22 @@ target 'Harton' do
   pod 'YYAsyncLayer'
   pod 'YYCategories'
   
-  pod 'ReactiveSwift'
+  #MJ
   pod 'MJRefresh'
 
+  #HUD
+  pod 'SVProgressHUD'
+  pod 'MBProgressHUD'
+  pod 'ProgressHUD'
+  
+  
+  pod 'FDFullscreenPopGesture'
+  
+  pod 'PromiseKit'
+  pod 'coswift'
+  pod 'Eureka'
+  
+  
+  pod 'CocoaLumberjack'
+  pod 'Aspects'
 end

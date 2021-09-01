@@ -8,7 +8,7 @@
 
 import Foundation
 import Moya
-
+import ProgressHUD
 // MARK: - APIProvider 自定义相关
 private let networkLoggerPlugin: NetworkLoggerPlugin = {
     let config = NetworkLoggerPlugin.Configuration(logOptions: NetworkLoggerPlugin.Configuration.LogOptions.verbose)
@@ -19,11 +19,14 @@ private let networkActivityPlugin = NetworkActivityPlugin { (change, target) -> 
     switch(change){
     case .began:
         DispatchQueue.main.async(execute: {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            ProgressHUD.show("加载中...")
         })
     case .ended:
         DispatchQueue.main.async(execute: {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            //ProgressHUD.showSuccess("成功")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                ProgressHUD.dismiss()
+            }
         })
     }
 }

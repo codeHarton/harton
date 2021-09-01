@@ -9,6 +9,7 @@ import UIKit
 import Moya
 import RxSwift
 import AsyncDisplayKit
+import MJRefresh
 class NetViewController: BaseViewController {
 
     lazy var viewModel = RxNetViewModel()
@@ -49,8 +50,16 @@ class NetViewController: BaseViewController {
         tableView.view.separatorStyle = .none
         view.addSubnode(tableView)
 
+        tableView.view.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(headRefresh))
     }
     
+    @objc func headRefresh(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.tableView.view.mj_header?.endRefreshing {
+                
+            }
+        }
+    }
 
 
 }
@@ -107,8 +116,6 @@ class NetCellNode: ASCellNode {
     lazy var imageView = ASNetworkImageNode()
     
     lazy var videoCoverImageView = ASNetworkImageNode()//ASNetworkImageNode(cache: ASImageProtocolServcie.getService(), downloader: ASImageProtocolServcie.getService())
-
-    
     lazy var videoNode = ASVideoPlayerNode()
     let info : Info
     init(info : Info) {
@@ -116,7 +123,7 @@ class NetCellNode: ASCellNode {
         super.init()
         _init()
     }
-    
+
     private func _init(){
         addSubnode(nickName)
         nickName.attributedText = NSAttributedString(string: info.nickname ?? "高清", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black])
@@ -132,12 +139,15 @@ class NetCellNode: ASCellNode {
         imageView.url = info.icon
         imageView.cornerRadius = 30
         
-        
+        neverShowPlaceholders = true 
         
         addSubnode(videoCoverImageView)
         videoCoverImageView.url = info.icon_origin
         videoCoverImageView.cornerRadius = 4
         
+        videoCoverImageView.placeholderEnabled = true
+        videoCoverImageView.placeholderColor = .white
+        videoCoverImageView.placeholderFadeDuration = 0.3
 //        addSubnode(videoNode)
 //        videoNode.assetURL = URL(string: "http://testfilebizhi.feihuo.com/video/sourceFile/20190222/448654de455aee18ce0a0d154075133b.mp4")
 //        videoNode.gravity = AVLayerVideoGravity.resizeAspectFill.rawValue
