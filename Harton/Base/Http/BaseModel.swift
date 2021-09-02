@@ -8,7 +8,7 @@
 
 import Foundation
 public protocol CustomResponse: CustomMappable {
-    var code: Int {get set}
+    var status: Int {get set}
     var error_msg: String {get set}
 }
 public class BaseModel: CustomMappable {
@@ -20,7 +20,7 @@ public class ResponseData<T: CustomMappable>: CustomResponse {
     
     required public init() { }
     
-    public var code: Int = -1
+    public var status: Int = -1
     public var error_msg: String = ""
     public var data: T?
 }
@@ -29,7 +29,7 @@ public class ResponseDataArray <T: CustomMappable>: CustomResponse {
     
     required public init() { }
     
-    public var code: Int = -1
+    public var status: Int = -1
     public var error_msg: String = ""
     public var data: [T]?
 }
@@ -38,7 +38,7 @@ public class ResponseAnyDataArray: CustomResponse {
     
     required public init() { }
     
-    public var code: Int = -1
+    public var status: Int = -1
     public var error_msg: String = ""
     public var data: [Any]?
 }
@@ -58,7 +58,7 @@ extension ResponseData{
     
     ///是否成功
     var success : Bool{
-        return 200 == code
+        return 0 == status
     }
 }
 
@@ -66,7 +66,7 @@ extension ResponseDataArray{
     
     ///是否成功
     var success : Bool{
-        return 200 == code
+        return 0 == status
     }
 }
 

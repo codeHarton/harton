@@ -41,6 +41,8 @@
 		F45AB21426CCAFB0005EC202 /* EncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45AB21326CCAFB0005EC202 /* EncryptViewController.swift */; };
 		F47648B326E069DD009D0A54 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B226E069DD009D0A54 /* InitViewController.swift */; };
 		F47648B626E0B819009D0A54 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B526E0B819009D0A54 /* ThreadViewController.swift */; };
+		F47648B826E0D32A009D0A54 /* SecondNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B726E0D32A009D0A54 /* SecondNetViewController.swift */; };
+		F47648BA26E0D72A009D0A54 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B926E0D72A009D0A54 /* InfoViewController.swift */; };
 		F476CE9126CF41FB001CAD97 /* TextureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F476CE9026CF41FB001CAD97 /* TextureViewController.swift */; };
 		F47D509826DC7F45008AC2FF /* ASExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D509726DC7F45008AC2FF /* ASExtension.swift */; };
 		F47D509C26DC9051008AC2FF /* Genericity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D509B26DC9051008AC2FF /* Genericity.swift */; };
@@ -93,6 +95,8 @@
 		F45AB21326CCAFB0005EC202 /* EncryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptViewController.swift; sourceTree = "<group>"; };
 		F47648B226E069DD009D0A54 /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
 		F47648B526E0B819009D0A54 /* ThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
+		F47648B726E0D32A009D0A54 /* SecondNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNetViewController.swift; sourceTree = "<group>"; };
+		F47648B926E0D72A009D0A54 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		F476CE9026CF41FB001CAD97 /* TextureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureViewController.swift; sourceTree = "<group>"; };
 		F47D509726DC7F45008AC2FF /* ASExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASExtension.swift; sourceTree = "<group>"; };
 		F47D509B26DC9051008AC2FF /* Genericity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genericity.swift; sourceTree = "<group>"; };
@@ -339,6 +343,8 @@
 			isa = PBXGroup;
 			children = (
 				F483C5AB26DE012000D9D728 /* HUDViewController.swift */,
+				F47648B726E0D32A009D0A54 /* SecondNetViewController.swift */,
+				F47648B926E0D72A009D0A54 /* InfoViewController.swift */,
 			);
 			path = Promise;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 				F41AA3BF26D8C833000F8A2E /* HTTPProvider.swift in Sources */,
 				F41AA3C026D8C833000F8A2E /* MoyaProvider+CustomConfig.swift in Sources */,
 				F41AA3CC26D8DDD5000F8A2E /* RXExtension.swift in Sources */,
+				F47648BA26E0D72A009D0A54 /* InfoViewController.swift in Sources */,
 				F41AA3C126D8C833000F8A2E /* CustomMappable.swift in Sources */,
 				F4A4408426D357C600958FF0 /* AsynExtension.swift in Sources */,
 				F47648B626E0B819009D0A54 /* ThreadViewController.swift in Sources */,
@@ -522,6 +529,7 @@
 				F4A4408C26D35DFF00958FF0 /* YYWeakProxy.m in Sources */,
 				F45AB21426CCAFB0005EC202 /* EncryptViewController.swift in Sources */,
 				F45AB1E426CBAA2E005EC202 /* AppDelegate.swift in Sources */,
+				F47648B826E0D32A009D0A54 /* SecondNetViewController.swift in Sources */,
 				F41AA3D026D8DE58000F8A2E /* RxNetViewModel.swift in Sources */,
 				F47D509826DC7F45008AC2FF /* ASExtension.swift in Sources */,
 				F45AB1E626CBAA2E005EC202 /* SceneDelegate.swift in Sources */,

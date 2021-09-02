@@ -40,11 +40,12 @@ class ThreadViewController: BaseViewController {
     func sisuo(){
         let queue = DispatchQueue(label: "s")
         queue.async {
-            print("----")
+            print("111")
             queue.sync {
                 ///死锁
-                print("----")
+                print("222")
             }
+            print("333")
         }
     }
     

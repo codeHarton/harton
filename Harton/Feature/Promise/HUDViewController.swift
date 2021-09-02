@@ -15,6 +15,7 @@ import ProgressHUD
 import RxSwift
 import RxCocoa
 import coswift
+import Moya
 extension AnimationType : CustomStringConvertible{
     public var description: String{
         switch self {
@@ -43,14 +44,7 @@ class HUDViewController: BaseViewController {
     lazy var tableView = UITableView(frame: .zero,style: .plain)
     
     override func viewDidLoad() {
-        ProgressHUD.animationType = .systemActivityIndicator
-        ProgressHUD.show()
-        URLSession.shared.rx.json(url: URL(string:"https://bizhi.feihuo.com/pc/v/list")!)._subscribe { value in
-            ProgressHUD.dismiss()
-            print(value)
-        }.disposed(by: self.rx.disposeBag)
-        
-  
+ 
         
         super.viewDidLoad()
         ProgressHUD.colorBackground = UIColor.green.withAlphaComponent(0.2)
@@ -120,14 +114,15 @@ class HUDViewController: BaseViewController {
     
     @objc func rightAciton(){
         ProgressHUD.dismiss()
-        let aView = UIView()
-        self.view.addSubview(aView)
-        aView.backgroundColor = .darkGray
-        aView.snp.makeConstraints { make  in
-            make.center.equalToSuperview()
-            make.size.equalTo(CGSize(width: 60, height: 60))
-        }
-        animationHorizontalCirclesPulse(aView)
+        navigationController?.pushViewController(SecondNetViewController(), animated: true)
+//        let aView = UIView()
+//        self.view.addSubview(aView)
+//        aView.backgroundColor = .darkGray
+//        aView.snp.makeConstraints { make  in
+//            make.center.equalToSuperview()
+//            make.size.equalTo(CGSize(width: 60, height: 60))
+//        }
+//        animationHorizontalCirclesPulse(aView)
     }
     
     private func animationHorizontalCirclesPulse(_ sView: UIView) {

@@ -22,6 +22,12 @@ enum HartonService {
     
 }
 
+extension TargetType{
+    var muTarget : MultiTarget{
+        return MultiTarget(self)
+    }
+}
+
 extension HartonService : TargetType{
     var headers: [String : String]? {
         return nil

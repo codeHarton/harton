@@ -86,11 +86,19 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.15.3):
     - PromiseKit/CorePromise
+  - RxAlamofire (5.7.1):
+    - RxAlamofire/Core (= 5.7.1)
+  - RxAlamofire/Core (5.7.1):
+    - Alamofire (~> 5.4)
+    - RxSwift (~> 5.1)
   - RxCocoa (5.1.3):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxDataSources (4.0.1):
     - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxKeyboard (1.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
   - RxRelay (5.1.3):
@@ -189,8 +197,10 @@ DEPENDENCIES:
   - pop
   - ProgressHUD
   - PromiseKit
+  - RxAlamofire
   - RxCocoa
   - RxDataSources
+  - RxKeyboard
   - RxSwift
   - SAMKeychain
   - SDWebImage
@@ -242,8 +252,10 @@ SPEC REPOS:
     - pop
     - ProgressHUD
     - PromiseKit
+    - RxAlamofire
     - RxCocoa
     - RxDataSources
+    - RxKeyboard
     - RxRelay
     - RxSwift
     - SAMKeychain
@@ -294,8 +306,10 @@ SPEC CHECKSUMS:
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   PromiseKit: 3b2b6995e51a954c46dbc550ce3da44fbfb563c5
+  RxAlamofire: 8e144c62dcc01d68dcb366bfc542eb6dd46bab78
   RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
   RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
@@ -316,6 +330,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 6daa2c8764fa6e3e38883e673cf411c0b09ed018
+PODFILE CHECKSUM: ce3aff678d7d1cbeca913462837b8b19f9fde201
 
 COCOAPODS: 1.10.1

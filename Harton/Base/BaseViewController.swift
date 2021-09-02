@@ -15,9 +15,13 @@ class BaseViewController: UIViewController {
         self.view.backgroundColor = .white
         
         remarks()
+        
+        setupViews()
         // Do any additional setup after loading the view.
     }
     
+    
+    func setupViews(){}
     deinit {
         print(type(of: self).description(),"dealloc")
     }

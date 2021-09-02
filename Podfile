@@ -17,9 +17,10 @@ target 'Harton' do
   pod 'SSZipArchive'
   pod 'pop'
   pod 'AFNetworking'
-
+  pod 'RxAlamofire'
   pod 'Then'
-  
+  pod 'RxKeyboard'
+
   #data
   pod 'FMDB'
   pod 'MMKV'

@@ -8,6 +8,7 @@
 import Foundation
 import AsyncDisplayKit
 import Kingfisher
+import ProgressHUD
 
 public class ASImageProtocolServcie{
     public static func getService() ->(ASImageCacheProtocol & ASImageDownloaderProtocol){
@@ -70,5 +71,19 @@ class ImageContainer: NSObject, ASImageContainerProtocol {
     }
     func asdk_animatedImageData() -> Data? {
         return data
+    }
+}
+
+
+extension ProgressHUD{
+    
+    static func _dismiss(delay : TimeInterval = 1){
+        guard delay > 0 else {
+            dismiss()
+            return
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            dismiss()
+        }
     }
 }

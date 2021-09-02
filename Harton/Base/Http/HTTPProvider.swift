@@ -23,10 +23,8 @@ private let networkActivityPlugin = NetworkActivityPlugin { (change, target) -> 
         })
     case .ended:
         DispatchQueue.main.async(execute: {
-            //ProgressHUD.showSuccess("成功")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                ProgressHUD.dismiss()
-            }
+            ProgressHUD.showSuccess("成功")
+            ProgressHUD._dismiss()
         })
     }
 }
