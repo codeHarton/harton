@@ -16,6 +16,7 @@ target 'Harton' do
   pod 'SAMKeychain'
   pod 'SSZipArchive'
   pod 'pop'
+  pod 'AFNetworking'
 
   pod 'Then'
   

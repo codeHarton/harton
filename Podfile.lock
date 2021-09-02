@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - Alamofire (5.4.3)
   - Aspects (1.4.1)
   - Charts (3.6.0):
@@ -154,6 +169,7 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
+  - AFNetworking
   - Aspects
   - Charts
   - CocoaLumberjack
@@ -197,6 +213,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
     - Alamofire
     - Aspects
     - Charts
@@ -248,6 +265,7 @@ SPEC REPOS:
     - YYWebImage
 
 SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
@@ -298,6 +316,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 6d8ace3a7c9e0492fc2079848a3f0cdaba729faf
+PODFILE CHECKSUM: 6daa2c8764fa6e3e38883e673cf411c0b09ed018
 
 COCOAPODS: 1.10.1

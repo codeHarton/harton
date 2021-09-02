@@ -18,6 +18,9 @@ class BaseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    deinit {
+        print(type(of: self).description(),"dealloc")
+    }
     
     public func remarks(){}
  

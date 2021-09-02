@@ -39,6 +39,8 @@
 		F45AB21026CCA759005EC202 /* ListValueSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45AB20B26CCA759005EC202 /* ListValueSectionController.swift */; };
 		F45AB21126CCA759005EC202 /* ListIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45AB20D26CCA759005EC202 /* ListIdentifiable.swift */; };
 		F45AB21426CCAFB0005EC202 /* EncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45AB21326CCAFB0005EC202 /* EncryptViewController.swift */; };
+		F47648B326E069DD009D0A54 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B226E069DD009D0A54 /* InitViewController.swift */; };
+		F47648B626E0B819009D0A54 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B526E0B819009D0A54 /* ThreadViewController.swift */; };
 		F476CE9126CF41FB001CAD97 /* TextureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F476CE9026CF41FB001CAD97 /* TextureViewController.swift */; };
 		F47D509826DC7F45008AC2FF /* ASExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D509726DC7F45008AC2FF /* ASExtension.swift */; };
 		F47D509C26DC9051008AC2FF /* Genericity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D509B26DC9051008AC2FF /* Genericity.swift */; };
@@ -89,6 +91,8 @@
 		F45AB20C26CCA759005EC202 /* IGListSwiftKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGListSwiftKit.h; sourceTree = "<group>"; };
 		F45AB20D26CCA759005EC202 /* ListIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListIdentifiable.swift; sourceTree = "<group>"; };
 		F45AB21326CCAFB0005EC202 /* EncryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptViewController.swift; sourceTree = "<group>"; };
+		F47648B226E069DD009D0A54 /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
+		F47648B526E0B819009D0A54 /* ThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
 		F476CE9026CF41FB001CAD97 /* TextureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureViewController.swift; sourceTree = "<group>"; };
 		F47D509726DC7F45008AC2FF /* ASExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASExtension.swift; sourceTree = "<group>"; };
 		F47D509B26DC9051008AC2FF /* Genericity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genericity.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 		F45AB1F726CBB0AF005EC202 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				F47648B426E0B801009D0A54 /* 多线程 */,
+				F47648B126E069D5009D0A54 /* Init */,
 				187D91B126DD132800C1D903 /* BigLotto */,
 				F483C5B126DE2B8D00D9D728 /* Lock */,
 				F483C5AA26DE010C00D9D728 /* Promise */,
@@ -295,6 +301,22 @@
 				F45AB21326CCAFB0005EC202 /* EncryptViewController.swift */,
 			);
 			path = secrict;
+			sourceTree = "<group>";
+		};
+		F47648B126E069D5009D0A54 /* Init */ = {
+			isa = PBXGroup;
+			children = (
+				F47648B226E069DD009D0A54 /* InitViewController.swift */,
+			);
+			path = Init;
+			sourceTree = "<group>";
+		};
+		F47648B426E0B801009D0A54 /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+				F47648B526E0B819009D0A54 /* ThreadViewController.swift */,
+			);
+			path = "多线程";
 			sourceTree = "<group>";
 		};
 		F47D509A26DC9042008AC2FF /* Genericity */ = {
@@ -470,12 +492,14 @@
 				F41AA3C626D8C946000F8A2E /* HartonService.swift in Sources */,
 				F483C5B626DE2BAE00D9D728 /* LockViewController.swift in Sources */,
 				F45AB20F26CCA759005EC202 /* IGListSingleSectionController+Refinements.swift in Sources */,
+				F47648B326E069DD009D0A54 /* InitViewController.swift in Sources */,
 				F483C5AC26DE012000D9D728 /* HUDViewController.swift in Sources */,
 				F41AA3BF26D8C833000F8A2E /* HTTPProvider.swift in Sources */,
 				F41AA3C026D8C833000F8A2E /* MoyaProvider+CustomConfig.swift in Sources */,
 				F41AA3CC26D8DDD5000F8A2E /* RXExtension.swift in Sources */,
 				F41AA3C126D8C833000F8A2E /* CustomMappable.swift in Sources */,
 				F4A4408426D357C600958FF0 /* AsynExtension.swift in Sources */,
+				F47648B626E0B819009D0A54 /* ThreadViewController.swift in Sources */,
 				F41AA3B626D8BA42000F8A2E /* LogExtension.swift in Sources */,
 				F47D50A326DCD389008AC2FF /* ReactiveDemo.swift in Sources */,
 				F4A4408B26D35DFF00958FF0 /* YYFPSLabel.m in Sources */,

@@ -14,7 +14,7 @@ import Kingfisher
 import ProgressHUD
 import RxSwift
 import RxCocoa
-
+import coswift
 extension AnimationType : CustomStringConvertible{
     public var description: String{
         switch self {
@@ -43,6 +43,15 @@ class HUDViewController: BaseViewController {
     lazy var tableView = UITableView(frame: .zero,style: .plain)
     
     override func viewDidLoad() {
+        ProgressHUD.animationType = .systemActivityIndicator
+        ProgressHUD.show()
+        URLSession.shared.rx.json(url: URL(string:"https://bizhi.feihuo.com/pc/v/list")!)._subscribe { value in
+            ProgressHUD.dismiss()
+            print(value)
+        }.disposed(by: self.rx.disposeBag)
+        
+  
+        
         super.viewDidLoad()
         ProgressHUD.colorBackground = UIColor.green.withAlphaComponent(0.2)
         ProgressHUD.colorHUD = .yellow
@@ -101,8 +110,8 @@ class HUDViewController: BaseViewController {
             
             
         }.disposed(by: rx.disposeBag)
-        tableView.rx.itemSelected._subscribe { index in
-            self.tableView.deselectRow(at: index, animated: true)
+        tableView.rx.itemSelected._subscribe {[weak self] index in
+            self?.tableView.deselectRow(at: index, animated: true)
         }.disposed(by: rx.disposeBag)
         // Do any additional setup after loading the view.
         
@@ -180,11 +189,6 @@ class HUDViewController: BaseViewController {
         
     }
     
-    func fetch() ->Promise<String>{
-        return Promise { resl in
-            resl.resolve("hello", nil)
-        }
-    }
 
     
     

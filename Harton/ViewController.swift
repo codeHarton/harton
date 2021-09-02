@@ -30,12 +30,18 @@ class ViewController: BaseViewController {
         
     
         // Do any additional setup after loading the view.
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(rightAciton))
     }
+    
+    @objc func rightAciton(){
+
+    }
+    
     
     private func setupTableView(){
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
-        Observable.just([Item(name: "沙盒", type: SandBoxViewController.self),Item(name: "ISA指针", type: IsaViewController.self),Item(name: "数据库", type: DataBaseViewController.self),Item(name: "AsyncDisplayKit", type: TextureViewController.self),Item(name: "RxSwift", type: NetViewController.self),Item(name: "Promise", type: HUDViewController.self),Item(name: "Lotto", type: BigLottoController.self),Item(name: "lock", type: LockViewController.self)]).bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)){ row, ele, cell in
+        Observable.just([Item(name: "多线程", type: ThreadViewController.self),Item(name: "Init", type: InitViewController.self),Item(name: "沙盒", type: SandBoxViewController.self),Item(name: "ISA指针", type: IsaViewController.self),Item(name: "数据库", type: DataBaseViewController.self),Item(name: "AsyncDisplayKit", type: TextureViewController.self),Item(name: "RxSwift", type: NetViewController.self),Item(name: "Promise", type: HUDViewController.self),Item(name: "Lotto", type: BigLottoController.self),Item(name: "lock", type: LockViewController.self)]).bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)){ row, ele, cell in
             print("row = \(row),ele = \(ele),cell = \(cell)")
             cell.textLabel?.text = ele.name
         }.disposed(by: disposeBag)

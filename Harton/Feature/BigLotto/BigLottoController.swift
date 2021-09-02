@@ -14,9 +14,8 @@ class BigLottoController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
     }
-    
+        
     override func numberOfSections(in tableView: UITableView) -> Int {
         return numbers.count
     }
@@ -32,5 +31,9 @@ class BigLottoController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true )
+    }
+    
+    deinit {
+        print(#function,type(of: self).description())
     }
 }
