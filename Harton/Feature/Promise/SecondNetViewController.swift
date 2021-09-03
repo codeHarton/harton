@@ -26,6 +26,8 @@ class SecondNetViewController: BaseViewController {
             self?.navigationController?.pushViewController(InfoViewController(info: info), animated: true)
         }.disposed(by: rx.disposeBag)
         // Do any additional setup after loading the view.
+        
+        
     }
     
     

@@ -53,6 +53,9 @@
 		F4A4408426D357C600958FF0 /* AsynExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A4408326D357C600958FF0 /* AsynExtension.swift */; };
 		F4A4408B26D35DFF00958FF0 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A4408926D35DFF00958FF0 /* YYFPSLabel.m */; };
 		F4A4408C26D35DFF00958FF0 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A4408A26D35DFF00958FF0 /* YYWeakProxy.m */; };
+		F4EC893626E1B59700F7CC49 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893526E1B59700F7CC49 /* RequestManager.swift */; };
+		F4EC893826E1F33700F7CC49 /* HitTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893726E1F33700F7CC49 /* HitTestViewController.swift */; };
+		F4EC893B26E202E200F7CC49 /* RunLoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893A26E202E200F7CC49 /* RunLoopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +114,9 @@
 		F4A4408826D35DFF00958FF0 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		F4A4408926D35DFF00958FF0 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		F4A4408A26D35DFF00958FF0 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		F4EC893526E1B59700F7CC49 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		F4EC893726E1F33700F7CC49 /* HitTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestViewController.swift; sourceTree = "<group>"; };
+		F4EC893A26E202E200F7CC49 /* RunLoopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,7 @@
 				F41AA3BB26D8C833000F8A2E /* MoyaProvider+CustomConfig.swift */,
 				F41AA3B826D8C833000F8A2E /* Response+HandyJson.swift */,
 				F41AA3B926D8C833000F8A2E /* Response+ObjectMapper.swift */,
+				F4EC893526E1B59700F7CC49 /* RequestManager.swift */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -215,6 +222,8 @@
 		F45AB1F726CBB0AF005EC202 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				F4EC893C26E2030100F7CC49 /* 响应者链条 */,
+				F4EC893926E202DA00F7CC49 /* RunLoop */,
 				F47648B426E0B801009D0A54 /* 多线程 */,
 				F47648B126E069D5009D0A54 /* Init */,
 				187D91B126DD132800C1D903 /* BigLotto */,
@@ -378,6 +387,22 @@
 			path = YY;
 			sourceTree = "<group>";
 		};
+		F4EC893926E202DA00F7CC49 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				F4EC893A26E202E200F7CC49 /* RunLoopViewController.swift */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		F4EC893C26E2030100F7CC49 /* 响应者链条 */ = {
+			isa = PBXGroup;
+			children = (
+				F4EC893726E1F33700F7CC49 /* HitTestViewController.swift */,
+			);
+			path = "响应者链条";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -500,6 +525,7 @@
 				F45AB20F26CCA759005EC202 /* IGListSingleSectionController+Refinements.swift in Sources */,
 				F47648B326E069DD009D0A54 /* InitViewController.swift in Sources */,
 				F483C5AC26DE012000D9D728 /* HUDViewController.swift in Sources */,
+				F4EC893626E1B59700F7CC49 /* RequestManager.swift in Sources */,
 				F41AA3BF26D8C833000F8A2E /* HTTPProvider.swift in Sources */,
 				F41AA3C026D8C833000F8A2E /* MoyaProvider+CustomConfig.swift in Sources */,
 				F41AA3CC26D8DDD5000F8A2E /* RXExtension.swift in Sources */,
@@ -510,10 +536,12 @@
 				F41AA3B626D8BA42000F8A2E /* LogExtension.swift in Sources */,
 				F47D50A326DCD389008AC2FF /* ReactiveDemo.swift in Sources */,
 				F4A4408B26D35DFF00958FF0 /* YYFPSLabel.m in Sources */,
+				F4EC893B26E202E200F7CC49 /* RunLoopViewController.swift in Sources */,
 				F41AA3BE26D8C833000F8A2E /* Response+ObjectMapper.swift in Sources */,
 				F41AA3CE26D8DE4B000F8A2E /* BaseViewModel.swift in Sources */,
 				F45AB21126CCA759005EC202 /* ListIdentifiable.swift in Sources */,
 				F41AA3CA26D8DB15000F8A2E /* ListModel.swift in Sources */,
+				F4EC893826E1F33700F7CC49 /* HitTestViewController.swift in Sources */,
 				F47D509C26DC9051008AC2FF /* Genericity.swift in Sources */,
 				F476CE9126CF41FB001CAD97 /* TextureViewController.swift in Sources */,
 				F45AB1FC26CBB1F7005EC202 /* BaseViewController.swift in Sources */,

@@ -20,6 +20,8 @@ class RxViewController: BaseViewController {
 
     lazy var textField = UITextField()
     lazy var button = UIButton()
+    lazy var label = UILabel()
+
     let per = Person()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,24 +40,26 @@ class RxViewController: BaseViewController {
             make.left.equalTo(44)
             make.height.equalTo(44)
         }
+        
+        self.view.addSubview(label)
+        label.snp.makeConstraints { make  in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(button.snp.bottom).offset(20)
+            make.left.equalTo(44)
+            make.height.equalTo(44)
+        }
         button.setTitleColor(.cyan, for: .normal)
         button.setTitle("test", for: .normal)
         textField.placeholder = "你好"
-        
-        textField.text = "诶"
-        textField.rx.text.bind(to: button.rx.title()).disposed(by: rx.disposeBag)
-        button.rx.controlEvent(.touchUpInside).throttle(1, scheduler: MainScheduler.instance)._subscribe {
-            
     
-        }
         button.rx.controlEvent(.touchUpInside)._subscribe(onNext: {self.navigationController?.pushViewController(NetViewController(), animated: true)}).disposed(by: rx.disposeBag)
         
-        
-        
-        
-      
+        textField.borderStyle = .roundedRect
+        textField.rx.text.orEmpty.bind(to: rx.title).disposed(by: rx.disposeBag)
 
+        textField.rx.text.orEmpty.bind(to: label.rx.text).disposed(by: rx.disposeBag)
 
+        
         
     }
     /*

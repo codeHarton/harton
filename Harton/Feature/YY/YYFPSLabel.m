@@ -49,7 +49,7 @@
 //    __weak typeof(self) weakSelf = self;
 //    _link = [CADisplayLink displayLinkWithTarget:weakSelf selector:@selector(tick:)];
     [_link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
-    
+    kCFRunLoopAllActivities;
     return self;
 }
 
