@@ -11,7 +11,7 @@ import RxSwift
 import NSObject_Rx
 import SnapKit
 import Moya
-
+import CoreLocation
 
 class Person: NSObject {
    @objc var name = "value"
@@ -61,7 +61,86 @@ class RxViewController: BaseViewController {
 
         
         
+        
+        let value = Atomic(value: "")
+        let withValue = value.with { value in
+            return 5
+        }
+        value.swap("100")
+        
+        value.modify { value  in
+            return "100"
+        }
+        
+        enum MyError : Error{
+            case none
+        }
+        let sig = Harton.Signal<Bool,MyError> { sub in
+            sub.putNext(false)
+            sub.putError(.none)
+            sub.putCompletion()
+            return Harton.ActionDisposable {
+                print("")
+            }
+        }
+        sig.start { value in
+            
+        }
+        let taksSignal = (sig |> take(1) |> map{value in
+            return 1
+        })
+
+
+        (sig |> deliverOn(Queue.mainQueue())).start()
+    
+        
+
+        textField.rx.text.orEmpty.take(10)
+        Harton.complete(String.self, MyError.self).start()
+
+        
+        let vie = UIView()
+        
+        let disposable = MetaDisposable()
+
+        disposable.set((sig |> take(1) |> filter({$0}) |> deliverOnMainQueue).start())
+        
+        
+    
+        
+        self.fetchDevice()._subscribe { type in
+            
+        }
+
+        
     }
+    
+    
+    func fetchDevice() ->Observable<AccessType>{
+       
+        Observable.create { sub  in
+            let stauts = CLLocationManager.authorizationStatus()
+            switch stauts{
+            case .authorizedAlways,.authorizedWhenInUse:
+                sub.onNext(.allowed)
+            case .denied,.restricted:
+                sub.onNext(.denied)
+            case .notDetermined:
+                sub.onNext(.notDetermined)
+            @unknown default:
+                fatalError()
+            }
+            sub.onCompleted()
+            return Disposables.create {
+                print("释放")
+            }
+        }
+        
+        
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -73,3 +152,16 @@ class RxViewController: BaseViewController {
     */
 
 }
+public enum AccessType {
+
+    case notDetermined
+
+    case allowed
+
+    case denied
+
+    case restricted
+
+    case unreachable
+}
+

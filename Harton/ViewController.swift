@@ -34,7 +34,8 @@ class ViewController: BaseViewController {
     }
     
     @objc func rightAciton(){
-
+        let vc = UIStoryboard(name: "LoginAndRegister", bundle: nil).instantiateViewController(identifier: "LoginViewController")
+        self.navigationController?.pushViewController(vc)
     }
     
     

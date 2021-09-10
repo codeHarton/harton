@@ -33,12 +33,12 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 + (void)load{
 
-    NSError *error = nil;
-    [UIButton aspect_hookSelector:@selector(sendAction:to:forEvent:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> info){
-       // NSLog(@"------收到点击事件 id  = %@",info.instance);
-        [SVProgressHUD showWithStatus:@"点击"];
-        [SVProgressHUD dismissWithDelay:1];
-    } error:&error];
+//    NSError *error = nil;
+//    [UIButton aspect_hookSelector:@selector(sendAction:to:forEvent:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> info){
+//       // NSLog(@"------收到点击事件 id  = %@",info.instance);
+//        [SVProgressHUD showWithStatus:@"点击"];
+//        [SVProgressHUD dismissWithDelay:1];
+//    } error:&error];
 }
 
 

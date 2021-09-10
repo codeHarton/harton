@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="Harton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-Ns-IBi">
+                                <rect key="frame" x="22" y="44" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Rcy-0D-vw9"/>
+                                    <constraint firstAttribute="width" constant="44" id="zPr-oW-5Ws"/>
+                                </constraints>
+                                <state key="normal" image="icon_back_black"/>
+                                <connections>
+                                    <action selector="backWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XHY-EF-9jV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4S-Tu-SR6" customClass="RegisterTextField" customModule="Harton" customModuleProvider="target">
+                                <rect key="frame" x="32" y="204.5" width="350" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="0Ew-cq-4ni"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="tip" value="手机号码"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SW8-MT-glW" customClass="RegisterTextField" customModule="Harton" customModuleProvider="target">
+                                <rect key="frame" x="32" y="323.5" width="350" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="tip" value="输入密码"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登陆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsz-cX-GHU">
+                                <rect key="frame" x="32" y="98" width="53" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwm-ey-6Nq" customClass="LoginButton" customModule="Harton" customModuleProvider="target">
+                                <rect key="frame" x="32" y="417.5" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ySL-Ys-Wof"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="登录"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Iwm-ey-6Nq" firstAttribute="trailing" secondItem="SW8-MT-glW" secondAttribute="trailing" id="1Dy-7M-GN7"/>
+                            <constraint firstItem="Vsz-cX-GHU" firstAttribute="top" secondItem="AkR-Ns-IBi" secondAttribute="bottom" constant="10" id="2Rx-6j-b2m"/>
+                            <constraint firstItem="Iwm-ey-6Nq" firstAttribute="leading" secondItem="SW8-MT-glW" secondAttribute="leading" id="2gb-yR-JvX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="h4S-Tu-SR6" secondAttribute="trailing" constant="32" id="4U8-xt-jLK"/>
+                            <constraint firstItem="h4S-Tu-SR6" firstAttribute="leading" secondItem="Vsz-cX-GHU" secondAttribute="leading" id="MJg-fq-q1M"/>
+                            <constraint firstItem="Iwm-ey-6Nq" firstAttribute="top" secondItem="SW8-MT-glW" secondAttribute="bottom" constant="40" id="Mpe-tV-e2h"/>
+                            <constraint firstItem="SW8-MT-glW" firstAttribute="height" secondItem="h4S-Tu-SR6" secondAttribute="height" id="PCw-Id-WTq"/>
+                            <constraint firstItem="SW8-MT-glW" firstAttribute="top" secondItem="h4S-Tu-SR6" secondAttribute="bottom" constant="65" id="QsG-FH-Ysr"/>
+                            <constraint firstItem="h4S-Tu-SR6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="WD9-mz-sk3"/>
+                            <constraint firstItem="SW8-MT-glW" firstAttribute="trailing" secondItem="h4S-Tu-SR6" secondAttribute="trailing" id="Yk9-6c-ExD"/>
+                            <constraint firstItem="AkR-Ns-IBi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="22" id="oam-r3-iMe"/>
+                            <constraint firstItem="h4S-Tu-SR6" firstAttribute="top" secondItem="Vsz-cX-GHU" secondAttribute="bottom" constant="75" id="t1l-t7-sdf"/>
+                            <constraint firstItem="AkR-Ns-IBi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="uK6-Mt-159"/>
+                            <constraint firstItem="SW8-MT-glW" firstAttribute="leading" secondItem="h4S-Tu-SR6" secondAttribute="leading" id="uXD-ad-v2Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Yl-Mp-R9W"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="Iwm-ey-6Nq" id="uqT-4p-wf8"/>
+                        <outlet property="passwordTf" destination="SW8-MT-glW" id="xhj-vO-grM"/>
+                        <outlet property="phoneTf" destination="h4S-Tu-SR6" id="Pgv-Rp-ZNW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="-167"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lf0-xj-Z6e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="MXA-9o-5uX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fXO-Wy-zQZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="XGT-VL-aG0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tmg-kV-OKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2519" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_back_black" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

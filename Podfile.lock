@@ -86,6 +86,13 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.15.3):
     - PromiseKit/CorePromise
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - RxAlamofire (5.7.1):
     - RxAlamofire/Core (= 5.7.1)
   - RxAlamofire/Core (5.7.1):
@@ -104,6 +111,14 @@ PODS:
   - RxRelay (5.1.3):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
   - SAMKeychain (1.5.3)
   - SDWebImage (4.4.8):
     - SDWebImage/Core (= 4.4.8)
@@ -197,11 +212,13 @@ DEPENDENCIES:
   - pop
   - ProgressHUD
   - PromiseKit
+  - ReactiveCocoa (~> 2.5.0)
   - RxAlamofire
   - RxCocoa
   - RxDataSources
   - RxKeyboard
   - RxSwift
+  - RxSwiftExt (~> 5)
   - SAMKeychain
   - SDWebImage
   - SDWebImage/WebP
@@ -252,12 +269,14 @@ SPEC REPOS:
     - pop
     - ProgressHUD
     - PromiseKit
+    - ReactiveCocoa
     - RxAlamofire
     - RxCocoa
     - RxDataSources
     - RxKeyboard
     - RxRelay
     - RxSwift
+    - RxSwiftExt
     - SAMKeychain
     - SDWebImage
     - SnapKit
@@ -306,12 +325,14 @@ SPEC CHECKSUMS:
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   PromiseKit: 3b2b6995e51a954c46dbc550ce3da44fbfb563c5
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RxAlamofire: 8e144c62dcc01d68dcb366bfc542eb6dd46bab78
   RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
   RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
@@ -330,6 +351,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: ce3aff678d7d1cbeca913462837b8b19f9fde201
+PODFILE CHECKSUM: c7cfd5deacd29716871da2996509d6e4107c9d5b
 
 COCOAPODS: 1.10.1

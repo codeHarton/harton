@@ -7,13 +7,14 @@
 
 import UIKit
 
-extension Timer {
+extension Foundation.Timer {
     static func weak_scheduledTimer(interval : TimeInterval,_repeat : Bool = true,block : @escaping (_ timer : Timer) ->Void){
-        scheduledTimer(timeInterval: interval, target: self, selector:#selector(_timerAction(timer:)), userInfo: block, repeats: _repeat)
+        
+        Foundation.Timer.scheduledTimer(timeInterval: interval, target: self, selector:#selector(_timerAction(timer:)), userInfo: block, repeats: _repeat)
     }
     
-    @objc static func _timerAction(timer : Timer){
-        let block = timer.userInfo as? ((_ timer : Timer) ->Void)
+    @objc static func _timerAction(timer : Foundation.Timer){
+        let block = timer.userInfo as? ((_ timer : Foundation.Timer) ->Void)
         block?(timer)
     }
 }

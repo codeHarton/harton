@@ -42,6 +42,7 @@ target 'Harton' do
   pod 'RxCocoa'
   pod 'RxSwift'
   pod 'RxDataSources'
+  pod 'ReactiveCocoa', '~> 2.5.0'
   
   #YYKit
   pod 'YYModel'
@@ -72,4 +73,8 @@ target 'Harton' do
   
   pod 'CocoaLumberjack'
   pod 'Aspects'
+  
+  
+  pod 'RxSwiftExt', '~> 5'
+
 end

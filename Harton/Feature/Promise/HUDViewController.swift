@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import PromiseKit
 import CocoaLumberjack
 import SnapKit
 import Aspects
