@@ -11,9 +11,17 @@ public protocol CustomResponse: CustomMappable {
     var status: Int {get set}
     var error_msg: String {get set}
 }
-public class BaseModel: CustomMappable {
+public class BaseModel: CustomMappable , CustomStringConvertible {
     required public init() { }
     public func didFinishMapping() { }
+    
+    public var description: String{
+        
+        guard let value = toJSONString() else {
+            return #function
+        }
+        return value
+    }
 }
 
 public class ResponseData<T: CustomMappable>: CustomResponse {

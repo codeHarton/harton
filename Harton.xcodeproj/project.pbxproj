@@ -62,6 +62,7 @@
 		F4B5859426E84CDD00455D73 /* UIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5859326E84CDD00455D73 /* UIConstant.swift */; };
 		F4B5859626E84DDF00455D73 /* UIButton+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5859526E84DDF00455D73 /* UIButton+Ex.swift */; };
 		F4B7097226EB5F5600A28C20 /* RXExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7097126EB5F5600A28C20 /* RXExt.swift */; };
+		F4B7097426EC439100A28C20 /* RXEXTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7097326EC439100A28C20 /* RXEXTViewController.swift */; };
 		F4D4528D26E9F98900FF1F47 /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D4527326E9F98900FF1F47 /* Subscriber.swift */; };
 		F4D4528E26E9F98900FF1F47 /* ThreadPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D4527426E9F98900FF1F47 /* ThreadPool.swift */; };
 		F4D4528F26E9F98900FF1F47 /* Signal_Catch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D4527526E9F98900FF1F47 /* Signal_Catch.swift */; };
@@ -158,6 +159,7 @@
 		F4B5859326E84CDD00455D73 /* UIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstant.swift; sourceTree = "<group>"; };
 		F4B5859526E84DDF00455D73 /* UIButton+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ex.swift"; sourceTree = "<group>"; };
 		F4B7097126EB5F5600A28C20 /* RXExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXExt.swift; sourceTree = "<group>"; };
+		F4B7097326EC439100A28C20 /* RXEXTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXEXTViewController.swift; sourceTree = "<group>"; };
 		F4D4527326E9F98900FF1F47 /* Subscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
 		F4D4527426E9F98900FF1F47 /* ThreadPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadPool.swift; sourceTree = "<group>"; };
 		F4D4527526E9F98900FF1F47 /* Signal_Catch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Catch.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				F45AB1FB26CBB1F7005EC202 /* BaseViewController.swift */,
 				F47D509726DC7F45008AC2FF /* ASExtension.swift */,
 				F483C5B026DE08E900D9D728 /* log */,
+				F4B7097326EC439100A28C20 /* RXEXTViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				F45AB20026CBC234005EC202 /* DataBaseViewController.swift in Sources */,
 				F4B5859226E84C7600455D73 /* LoginButton.swift in Sources */,
 				F45AB20726CCA615005EC202 /* IGLViewController.swift in Sources */,
+				F4B7097426EC439100A28C20 /* RXEXTViewController.swift in Sources */,
 				F4A4408C26D35DFF00958FF0 /* YYWeakProxy.m in Sources */,
 				F4D4529826E9F98900FF1F47 /* Disposable.swift in Sources */,
 				F4D4529426E9F98900FF1F47 /* Lock.swift in Sources */,

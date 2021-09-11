@@ -38,6 +38,14 @@ class RXExt: NSObject {
         
         
         Harton.last(signal: sig)
+        
+        
+        let aut = Atomic(value: 1)
+        let res = aut.with { value  in
+            return String(value)
+        }
+        
+        
 
 
         

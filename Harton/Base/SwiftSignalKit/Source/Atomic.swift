@@ -23,6 +23,10 @@ public final class Atomic<T> {
         return result
     }
     
+    func get() ->T{
+        return with{$0}
+    }
+    
     public func modify(_ f: (T) -> T) -> T {
         pthread_mutex_lock(&self.lock)
         let result = f(self.value)
