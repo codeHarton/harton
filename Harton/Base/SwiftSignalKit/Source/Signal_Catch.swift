@@ -242,3 +242,43 @@ public func restartIfError<T, E>(_ signal: Signal<T, E>) -> Signal<T, NoError> {
     }
 }
 
+///失败重试次数
+public func restartIfError<T, E>(maxCount : Int) -> (_ signal: Signal<T, E>) -> Signal<T, E> {
+    return { signal in
+        Signal<T, E> { subscriber in
+            let shouldRetry = Atomic(value: true)
+            let retryCount = Atomic(value: 0)
+            let currentDisposable = MetaDisposable()
+            
+            let start = recursiveFunction { recurse in
+                let currentShouldRetry = shouldRetry.with { value in
+                    return value
+                }
+                if currentShouldRetry {
+                    let disposable = signal.start(next: { next in
+                        subscriber.putNext(next)
+                    }, error: { error in
+                        let value = retryCount.modify{$0 + 1}
+                        if value >= maxCount{
+                            let _ = shouldRetry.swap(false)
+                            subscriber.putError(error)
+                            return
+                        }
+                        recurse()
+                    }, completed: {
+                        let _ = shouldRetry.swap(false)
+                        subscriber.putCompletion()
+                    })
+                    currentDisposable.set(disposable)
+                }
+            }
+            
+            start()
+            
+            return ActionDisposable {
+                currentDisposable.dispose()
+                let _ = shouldRetry.swap(false)
+            }
+        }
+    }
+}

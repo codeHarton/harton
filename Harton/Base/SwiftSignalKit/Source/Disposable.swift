@@ -127,6 +127,9 @@ public final class DisposableSet : Disposable {
     }
     
     deinit {
+        if !disposed {
+            dispose()
+        }
         pthread_mutex_lock(&self.lock)
         self.disposables.removeAll()
         pthread_mutex_unlock(&self.lock)

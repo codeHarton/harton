@@ -20,6 +20,7 @@ target 'Harton' do
   pod 'RxAlamofire'
   pod 'Then'
   pod 'RxKeyboard'
+  pod 'CollectionViewPagingLayout'
 
   #data
   pod 'FMDB'

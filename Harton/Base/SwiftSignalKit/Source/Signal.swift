@@ -45,6 +45,20 @@ public final class Signal<T, E> {
         self.generator = generator
     }
     
+    
+    public func start(next: ((T) -> Void)! = nil) -> Disposable {
+        self.start(next: next, error: nil)
+    }
+    
+    public func start(next: ((T) -> Void)! = nil, error: ((E) -> Void)! = nil) -> Disposable {
+        self.start(next: next, error: error, completed: nil)
+    }
+    
+    
+    public func start(next: ((T) -> Void)! = nil, completed: (() -> Void)! = nil) -> Disposable {
+        self.start(next: next, error: nil, completed: completed)
+    }
+    
     public func start(next: ((T) -> Void)! = nil, error: ((E) -> Void)! = nil, completed: (() -> Void)! = nil) -> Disposable {
         let subscriber = Subscriber<T, E>(next: next, error: error, completed: completed)
         let disposable = self.generator(subscriber)
