@@ -47,14 +47,30 @@ class RXEXTViewController: BaseViewController {
         }
     }))
     
-    
+   
+
+
     
     let vPromise = ValuePromise<Bool>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        let ob = Observable<Int>.create { sub in
+            sub.onNext(10000)
+            return Disposables.create {
+            print("shifang")
+            }
+        }
+        
+        ob._subscribe { value in
+            value.log()
+        }.disposed(by: rx.disposeBag)
         
         
+    }
+    
+    func test5(){
         let _s1 = Signal<Int,NoError> { sub in
             Observable<Int>.interval(1, scheduler: MainScheduler.instance)._subscribe {value  in
                 sub.putNext(value)
@@ -84,12 +100,7 @@ class RXEXTViewController: BaseViewController {
             print("value = \(value)")
         }
         
-        
-        
-        
     }
-    
-    
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -40,6 +40,7 @@
 		F45AB21026CCA759005EC202 /* ListValueSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45AB20B26CCA759005EC202 /* ListValueSectionController.swift */; };
 		F45AB21126CCA759005EC202 /* ListIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45AB20D26CCA759005EC202 /* ListIdentifiable.swift */; };
 		F45AB21426CCAFB0005EC202 /* EncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45AB21326CCAFB0005EC202 /* EncryptViewController.swift */; };
+		F46981EA2703FDA5009F50F1 /* MyProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F46981E92703FDA5009F50F1 /* MyProxy.m */; };
 		F47648B326E069DD009D0A54 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B226E069DD009D0A54 /* InitViewController.swift */; };
 		F47648B626E0B819009D0A54 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B526E0B819009D0A54 /* ThreadViewController.swift */; };
 		F47648B826E0D32A009D0A54 /* SecondNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B726E0D32A009D0A54 /* SecondNetViewController.swift */; };
@@ -89,6 +90,7 @@
 		F4D452A426E9F98900FF1F47 /* Signal_Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D4528A26E9F98900FF1F47 /* Signal_Combine.swift */; };
 		F4D452A526E9F98900FF1F47 /* Signal_Timing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D4528B26E9F98900FF1F47 /* Signal_Timing.swift */; };
 		F4D452A626E9F98900FF1F47 /* Signal_Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D4528C26E9F98900FF1F47 /* Signal_Meta.swift */; };
+		F4D6EC3727004D7900317360 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6EC3627004D7900317360 /* Test.swift */; };
 		F4EC893626E1B59700F7CC49 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893526E1B59700F7CC49 /* RequestManager.swift */; };
 		F4EC893826E1F33700F7CC49 /* HitTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893726E1F33700F7CC49 /* HitTestViewController.swift */; };
 		F4EC893B26E202E200F7CC49 /* RunLoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893A26E202E200F7CC49 /* RunLoopViewController.swift */; };
@@ -133,6 +135,8 @@
 		F45AB20C26CCA759005EC202 /* IGListSwiftKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGListSwiftKit.h; sourceTree = "<group>"; };
 		F45AB20D26CCA759005EC202 /* ListIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListIdentifiable.swift; sourceTree = "<group>"; };
 		F45AB21326CCAFB0005EC202 /* EncryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptViewController.swift; sourceTree = "<group>"; };
+		F46981E82703FDA5009F50F1 /* MyProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProxy.h; sourceTree = "<group>"; };
+		F46981E92703FDA5009F50F1 /* MyProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyProxy.m; sourceTree = "<group>"; };
 		F47648B226E069DD009D0A54 /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
 		F47648B526E0B819009D0A54 /* ThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
 		F47648B726E0D32A009D0A54 /* SecondNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNetViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		F4D4528A26E9F98900FF1F47 /* Signal_Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Combine.swift; sourceTree = "<group>"; };
 		F4D4528B26E9F98900FF1F47 /* Signal_Timing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Timing.swift; sourceTree = "<group>"; };
 		F4D4528C26E9F98900FF1F47 /* Signal_Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Meta.swift; sourceTree = "<group>"; };
+		F4D6EC3627004D7900317360 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		F4EC893526E1B59700F7CC49 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		F4EC893726E1F33700F7CC49 /* HitTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestViewController.swift; sourceTree = "<group>"; };
 		F4EC893A26E202E200F7CC49 /* RunLoopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopViewController.swift; sourceTree = "<group>"; };
@@ -326,6 +331,7 @@
 				F47D509726DC7F45008AC2FF /* ASExtension.swift */,
 				F483C5B026DE08E900D9D728 /* log */,
 				F4B7097326EC439100A28C20 /* RXEXTViewController.swift */,
+				F4D6EC3627004D7900317360 /* Test.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -459,6 +465,8 @@
 				F4A4408926D35DFF00958FF0 /* YYFPSLabel.m */,
 				F4A4408726D35DFF00958FF0 /* YYWeakProxy.h */,
 				F4A4408A26D35DFF00958FF0 /* YYWeakProxy.m */,
+				F46981E82703FDA5009F50F1 /* MyProxy.h */,
+				F46981E92703FDA5009F50F1 /* MyProxy.m */,
 			);
 			path = YY;
 			sourceTree = "<group>";
@@ -726,7 +734,9 @@
 				F4D4529226E9F98900FF1F47 /* Signal_Merge.swift in Sources */,
 				F47648B826E0D32A009D0A54 /* SecondNetViewController.swift in Sources */,
 				F41AA3D026D8DE58000F8A2E /* RxNetViewModel.swift in Sources */,
+				F4D6EC3727004D7900317360 /* Test.swift in Sources */,
 				F47D509826DC7F45008AC2FF /* ASExtension.swift in Sources */,
+				F46981EA2703FDA5009F50F1 /* MyProxy.m in Sources */,
 				F45AB1E626CBAA2E005EC202 /* SceneDelegate.swift in Sources */,
 				F4D452A626E9F98900FF1F47 /* Signal_Meta.swift in Sources */,
 				F41AA3BD26D8C833000F8A2E /* Response+HandyJson.swift in Sources */,

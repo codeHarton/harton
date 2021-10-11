@@ -11,8 +11,12 @@ class EncryptViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        MD5、SHA、HMAC这三种加密算法，可谓是非可逆加密，就是不可解密的加密方法，我们称之为单向加密算法。我们通常只把他们作为加密的基础。单纯的以上三种的加密并不可靠。
+//        HMAC需要秘钥  https://blog.csdn.net/SSY_1992/article/details/79094556
         // Do any additional setup after loading the view.
+        
+//        https 详解
+        //https://www.kuacg.com/22672.html
     }
     
     ///签名算法

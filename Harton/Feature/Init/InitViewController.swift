@@ -19,6 +19,27 @@ extension Foundation.Timer {
     }
 }
 
+/**
+ id 和 instancetype
+ instancetype的作用，就是使那些非关联返回类型的方法返回所在类的类型！
+
+ 好处：确定对象类型帮编译器更好定位代码问题。
+
+ 相同点：
+ 作为方法的返回类型
+
+ 不同点：
+ 1、instancetype 可以返回和方法所在类相同类型的对象，id只能返回未知类型的对象。
+
+ 2、instancetype只能作为返回值，id可以作为参数.
+
+
+
+ 作者：没了蜡笔de小新
+ 链接：https://www.jianshu.com/p/3127f2d00a57
+ 来源：简书
+ 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+ */
 class InitViewController: BaseViewController {
     
     // MARK:(4)线程死锁
@@ -98,9 +119,12 @@ class InitViewController: BaseViewController {
     
     var test : String?
     
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
+       // let timer = Foundation.Timer.scheduledTimer(timeInterval: 1, target: MyProxy(target: self), selector: #selector(timerAction), userInfo: nil, repeats: true)
     ///定时器内存问题 不是循环引用
         
 //        定时器即使不被引用，也可以正常运行。控制器可以弱引用定时器，这样就不存在循环引用了。第一种选择只解决了循环引用导致的内存泄漏问题，并不能解决当前控制器无法释放的问题，原因是Runloop对定时源的观察者要进行保留以便时间点到了进行调用，即定时器对象被Runloop强保留着，而定时器对象又强保留着当前控制器。
@@ -121,26 +145,47 @@ class InitViewController: BaseViewController {
 
         //dispatch_source()
         // Do any additional setup after loading the view.
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(rightAciton))
-        
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(rightAciton))
+//
         setupSession()
     }
     
     
-
+    
+    deinit {
+        #function.log()
+        link?.invalidate()
+        link = nil
+       // timer?.invalidate()
+    }
+    var url : URL{
+        return URL(string:"https://bizhi.feihuo.com/pc/v/list")!
+    }
     func setupSession(){
-        let url = URL(string:"https://bizhi.feihuo.com/pc/v/list")!
 //        session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
 //        let task =  session?.dataTask(with:url )
 //        task?.resume()
 //
         
         // MARK:此处如果没有resume会造成内存泄漏
-        URLSession.shared.dataTask(with: url) { data, response , error in
-            print(data?.count,self.description)
+//        URLSession.shared.dataTask(with: url) { data, response , error in
+//            print(data?.count,self.description)
+//        }.resume()
+        
+        
+        //self.session = URLSession(configuration: .default, delegate: self, delegateQueue: .main)
+//        self.session?.dataTask(with: url).resume()
+       
+        
+        URLSession.shared.dataTask(with: url) {[weak self] data, response , error in
+            guard let se = self else{
+                return
+            }
+            print(data?.count,se.description)
         }.resume()
     }
     
+
     
     
     @objc func rightAciton(){
@@ -177,12 +222,7 @@ class InitViewController: BaseViewController {
     @objc func timerAction(){
         print(#function)
     }
-    
-    deinit {
-        link?.invalidate()
-        link = nil
-       // timer?.invalidate()
-    }
+
 
     /*
     // MARK: - Navigation
@@ -209,7 +249,7 @@ extension InitViewController : URLSessionTaskDelegate,URLSessionDataDelegate{
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         print("请求完成")
-        session.finishTasksAndInvalidate()
+        //session.finishTasksAndInvalidate()
         
     }
 }

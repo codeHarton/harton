@@ -12,6 +12,23 @@ import RxSwift
 import Then
 import NSObject_Rx
 import RxDataSources
+protocol Identifier {
+    static var identifier : String{get}
+    var identifier : String{get}
+}
+extension UITableViewCell : Identifier{
+    var identifier: String {
+       return type(of: self).description()
+        
+    }
+    
+    static var identifier: String{    
+        return self.description()
+    }
+}
+class MyCell: UITableViewCell {
+    
+}
 class ViewController: BaseViewController {
     
     struct Item {
@@ -21,14 +38,16 @@ class ViewController: BaseViewController {
 
     @IBOutlet weak var tableView : UITableView!
     let disposeBag = DisposeBag()
+    
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         
+   
         
-        
-        
-    
+   
         // Do any additional setup after loading the view.
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(rightAciton))
     }

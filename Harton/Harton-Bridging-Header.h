@@ -5,3 +5,5 @@
 #import "YYFPSLabel.h"
 #import "DDLogWrapper.h"
 #import "YYWeakProxy.h"
+#import "MyProxy.h"
+
