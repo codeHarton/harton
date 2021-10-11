@@ -94,6 +94,7 @@
 		F4EC893626E1B59700F7CC49 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893526E1B59700F7CC49 /* RequestManager.swift */; };
 		F4EC893826E1F33700F7CC49 /* HitTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893726E1F33700F7CC49 /* HitTestViewController.swift */; };
 		F4EC893B26E202E200F7CC49 /* RunLoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893A26E202E200F7CC49 /* RunLoopViewController.swift */; };
+		F4F82A22271433E3008FD61A /* NatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F82A21271433E3008FD61A /* NatureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,6 +195,7 @@
 		F4EC893526E1B59700F7CC49 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		F4EC893726E1F33700F7CC49 /* HitTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestViewController.swift; sourceTree = "<group>"; };
 		F4EC893A26E202E200F7CC49 /* RunLoopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopViewController.swift; sourceTree = "<group>"; };
+		F4F82A21271433E3008FD61A /* NatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 		F45AB1F726CBB0AF005EC202 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				F4F82A1D27143382008FD61A /* 性能 */,
 				F4EC893C26E2030100F7CC49 /* 响应者链条 */,
 				F4EC893926E202DA00F7CC49 /* RunLoop */,
 				F47648B426E0B801009D0A54 /* 多线程 */,
@@ -544,6 +547,14 @@
 			path = "响应者链条";
 			sourceTree = "<group>";
 		};
+		F4F82A1D27143382008FD61A /* 性能 */ = {
+			isa = PBXGroup;
+			children = (
+				F4F82A21271433E3008FD61A /* NatureViewController.swift */,
+			);
+			path = "性能";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -666,6 +677,7 @@
 				F41AA3C626D8C946000F8A2E /* HartonService.swift in Sources */,
 				F483C5B626DE2BAE00D9D728 /* LockViewController.swift in Sources */,
 				F45AB20F26CCA759005EC202 /* IGListSingleSectionController+Refinements.swift in Sources */,
+				F4F82A22271433E3008FD61A /* NatureViewController.swift in Sources */,
 				F4D4529D26E9F98900FF1F47 /* Signal_SideEffects.swift in Sources */,
 				F47648B326E069DD009D0A54 /* InitViewController.swift in Sources */,
 				F483C5AC26DE012000D9D728 /* HUDViewController.swift in Sources */,

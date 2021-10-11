@@ -16,5 +16,5 @@
  The maxmium fps on iPad is 60.0.
  */
 @interface YYFPSLabel : UILabel
-
+@property( nonatomic,assign)NSObject *people;
 @end

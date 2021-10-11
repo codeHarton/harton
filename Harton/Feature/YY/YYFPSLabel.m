@@ -50,6 +50,7 @@
 //    _link = [CADisplayLink displayLinkWithTarget:weakSelf selector:@selector(tick:)];
     [_link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     kCFRunLoopAllActivities;
+    dispatch_queue_create("", DISPATCH_QUEUE_CONCURRENT);
     return self;
 }
 
