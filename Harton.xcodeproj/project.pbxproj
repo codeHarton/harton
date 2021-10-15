@@ -95,6 +95,10 @@
 		F4EC893826E1F33700F7CC49 /* HitTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893726E1F33700F7CC49 /* HitTestViewController.swift */; };
 		F4EC893B26E202E200F7CC49 /* RunLoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC893A26E202E200F7CC49 /* RunLoopViewController.swift */; };
 		F4F82A22271433E3008FD61A /* NatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F82A21271433E3008FD61A /* NatureViewController.swift */; };
+		F4F82A242715602F008FD61A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F82A232715602F008FD61A /* TestViewController.swift */; };
+		F4F82A2727157483008FD61A /* AutoreleasePoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F82A2627157483008FD61A /* AutoreleasePoolViewController.swift */; };
+		F4F82A2A27157689008FD61A /* OCAutoReleasePoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F82A2927157689008FD61A /* OCAutoReleasePoolViewController.m */; };
+		F4F82A2E271586E9008FD61A /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F82A2D271586E9008FD61A /* LayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,6 +200,11 @@
 		F4EC893726E1F33700F7CC49 /* HitTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestViewController.swift; sourceTree = "<group>"; };
 		F4EC893A26E202E200F7CC49 /* RunLoopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopViewController.swift; sourceTree = "<group>"; };
 		F4F82A21271433E3008FD61A /* NatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureViewController.swift; sourceTree = "<group>"; };
+		F4F82A232715602F008FD61A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		F4F82A2627157483008FD61A /* AutoreleasePoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoreleasePoolViewController.swift; sourceTree = "<group>"; };
+		F4F82A2827157689008FD61A /* OCAutoReleasePoolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAutoReleasePoolViewController.h; sourceTree = "<group>"; };
+		F4F82A2927157689008FD61A /* OCAutoReleasePoolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAutoReleasePoolViewController.m; sourceTree = "<group>"; };
+		F4F82A2D271586E9008FD61A /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +312,8 @@
 		F45AB1F726CBB0AF005EC202 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				F4F82A2C271586DB008FD61A /* UI */,
+				F4F82A2527157476008FD61A /* AutoreleasePool */,
 				F4F82A1D27143382008FD61A /* 性能 */,
 				F4EC893C26E2030100F7CC49 /* 响应者链条 */,
 				F4EC893926E202DA00F7CC49 /* RunLoop */,
@@ -321,6 +332,7 @@
 				F45AB20126CBC29A005EC202 /* isa */,
 				F45AB1FE26CBC221005EC202 /* database */,
 				F45AB1FD26CBC217005EC202 /* sandbox */,
+				F4F82A232715602F008FD61A /* TestViewController.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -555,6 +567,24 @@
 			path = "性能";
 			sourceTree = "<group>";
 		};
+		F4F82A2527157476008FD61A /* AutoreleasePool */ = {
+			isa = PBXGroup;
+			children = (
+				F4F82A2627157483008FD61A /* AutoreleasePoolViewController.swift */,
+				F4F82A2827157689008FD61A /* OCAutoReleasePoolViewController.h */,
+				F4F82A2927157689008FD61A /* OCAutoReleasePoolViewController.m */,
+			);
+			path = AutoreleasePool;
+			sourceTree = "<group>";
+		};
+		F4F82A2C271586DB008FD61A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F4F82A2D271586E9008FD61A /* LayoutViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -698,6 +728,7 @@
 				F4A4408426D357C600958FF0 /* AsynExtension.swift in Sources */,
 				F47648B626E0B819009D0A54 /* ThreadViewController.swift in Sources */,
 				F41AA3B626D8BA42000F8A2E /* LogExtension.swift in Sources */,
+				F4F82A2A27157689008FD61A /* OCAutoReleasePoolViewController.m in Sources */,
 				F47D50A326DCD389008AC2FF /* ReactiveDemo.swift in Sources */,
 				F4A4408B26D35DFF00958FF0 /* YYFPSLabel.m in Sources */,
 				F4D452A126E9F98900FF1F47 /* ValuePipe.swift in Sources */,
@@ -721,9 +752,11 @@
 				F45AB21026CCA759005EC202 /* ListValueSectionController.swift in Sources */,
 				F4D4529726E9F98900FF1F47 /* QueueLocalObject.swift in Sources */,
 				F45AB1E826CBAA2E005EC202 /* ViewController.swift in Sources */,
+				F4F82A2727157483008FD61A /* AutoreleasePoolViewController.swift in Sources */,
 				F4D4528D26E9F98900FF1F47 /* Subscriber.swift in Sources */,
 				F4D4529526E9F98900FF1F47 /* Timer.swift in Sources */,
 				F45AB20E26CCA759005EC202 /* IGListCollectionContext+Refinements.swift in Sources */,
+				F4F82A2E271586E9008FD61A /* LayoutViewController.swift in Sources */,
 				F41AA3C426D8C883000F8A2E /* NetViewController.swift in Sources */,
 				F423A64126E8901300F0EC41 /* CodeButton.swift in Sources */,
 				F41AA3C826D8D333000F8A2E /* BaseModel.swift in Sources */,
@@ -741,6 +774,7 @@
 				F45AB21426CCAFB0005EC202 /* EncryptViewController.swift in Sources */,
 				F45AB1E426CBAA2E005EC202 /* AppDelegate.swift in Sources */,
 				F4B5858D26E77C8800455D73 /* LoginViewController.swift in Sources */,
+				F4F82A242715602F008FD61A /* TestViewController.swift in Sources */,
 				F4D4529326E9F98900FF1F47 /* Signal_Mapping.swift in Sources */,
 				F4B5859426E84CDD00455D73 /* UIConstant.swift in Sources */,
 				F4D4529226E9F98900FF1F47 /* Signal_Merge.swift in Sources */,

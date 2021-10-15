@@ -13,7 +13,6 @@ import Kingfisher
 import ProgressHUD
 import RxSwift
 import RxCocoa
-import coswift
 import Moya
 extension AnimationType : CustomStringConvertible{
     public var description: String{

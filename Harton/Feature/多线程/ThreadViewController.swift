@@ -6,7 +6,54 @@
 //
 
 import UIKit
+// MARK:问题
+//判断是否会死锁
 
+///并发队列不需要等前面任务的执行情况  并发同步不会死锁
+
+//思考  并行队列同步会不会死锁
+func ques3(){
+    let queue = DispatchQueue(label: "--",attributes: .concurrent)
+    queue.sync {
+        print(Thread.current.description)
+        print("value")
+        queue.sync {
+            print("value111")
+        }
+        
+        queue.sync {
+            print("------")
+        }
+    }
+    
+    
+}
+
+// MARK:问题
+//判断是否会死锁
+
+
+func ques1(){
+    let queue = DispatchQueue(label: "--")
+    queue.async {
+        print(Thread.current.description)
+        print("value")
+        queue.sync {
+            print("value111")
+        }
+    }
+}
+
+fileprivate func ques2(){
+    let queue = DispatchQueue(label: "--")
+    queue.async {
+        print(Thread.current.description)
+        print("value")
+        queue.sync {
+            print("value111")
+        }
+    }
+}
 class ThreadViewController: BaseViewController {
 
     override func viewDidLoad() {

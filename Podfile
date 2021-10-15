@@ -16,12 +16,13 @@ target 'Harton' do
   pod 'SAMKeychain'
   pod 'SSZipArchive'
   pod 'pop'
-  pod 'AFNetworking'
+  #pod 'AFNetworking'
+  pod 'AFNetworking','~> 2.7.0'
   pod 'RxAlamofire'
   pod 'Then'
   pod 'RxKeyboard'
   pod 'CollectionViewPagingLayout'
-
+pod 'UITableView+FDTemplateLayoutCell'
   #data
   pod 'FMDB'
   pod 'MMKV'
@@ -32,6 +33,8 @@ target 'Harton' do
   pod 'SDWebImage'
   pod 'SDWebImage/WebP'
   
+  
+  pod 'FLAnimatedImage'
   
   
   pod 'Texture'
@@ -68,7 +71,7 @@ target 'Harton' do
   pod 'FDFullscreenPopGesture'
   
   pod 'PromiseKit'
-  pod 'coswift'
+  #pod 'coswift'
   pod 'Eureka'
   
   

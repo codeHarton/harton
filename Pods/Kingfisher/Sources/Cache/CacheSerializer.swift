@@ -88,7 +88,7 @@ public struct DefaultCacheSerializer: CacheSerializer {
     /// Whether the original data should be preferred when serializing the image.
     /// If `true`, the input original data will be checked first and used unless the data is `nil`.
     /// In that case, the serialization will fall back to creating data from image.
-    public var preferCacheOriginalData: Bool = false
+    public var preferCacheOriginalData: Bool = true
 
     /// Creates a cache serializer that serialize and deserialize images in PNG, JPEG and GIF format.
     ///

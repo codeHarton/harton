@@ -7,6 +7,8 @@
 
 import UIKit
 
+///https://tianxueweii.github.io/2018/11/26/%E5%85%B3%E4%BA%8EiOS%E7%BA%BF%E7%A8%8B%E9%94%81%E7%9A%84%E4%B8%80%E7%82%B9%E7%A0%94%E7%A9%B6/
+
 class LockViewController: BaseViewController {
 
     /**
@@ -23,10 +25,8 @@ class LockViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
-        
-     
+       
+        ques3()
         // Do any additional setup after loading the view.
     }
     

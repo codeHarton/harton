@@ -7,3 +7,4 @@
 #import "YYWeakProxy.h"
 #import "MyProxy.h"
 
+#import "OCAutoReleasePoolViewController.h"
