@@ -21,7 +21,10 @@ class TextureViewController: BaseViewController {
         tableView.view.separatorStyle = .none
         tableView.view.allowsSelection = false
         tableView.allowsSelection = true 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: YYFPSLabel())
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: YYFPSLabel()),UIBarButtonItem(title: "layout", style: .done, target: self, action: #selector(layoutAction))]
+    }
+    @objc func layoutAction(){
+        navigationController?.pushViewController(TextureLayoutViewController())
     }
     
     override func viewDidLayoutSubviews() {

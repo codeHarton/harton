@@ -53,6 +53,8 @@
 		F47D509826DC7F45008AC2FF /* ASExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D509726DC7F45008AC2FF /* ASExtension.swift */; };
 		F47D509C26DC9051008AC2FF /* Genericity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D509B26DC9051008AC2FF /* Genericity.swift */; };
 		F47D50A326DCD389008AC2FF /* ReactiveDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D50A226DCD389008AC2FF /* ReactiveDemo.swift */; };
+		F4802B2F2720156200F005A4 /* TextureLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4802B2E2720156200F005A4 /* TextureLayoutViewController.swift */; };
+		F4802B3127201C3B00F005A4 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4802B3027201C3B00F005A4 /* UIKitExtension.swift */; };
 		F483C5AC26DE012000D9D728 /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483C5AB26DE012000D9D728 /* HUDViewController.swift */; };
 		F483C5AF26DE08B000D9D728 /* DDLogWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F483C5AE26DE08B000D9D728 /* DDLogWrapper.m */; };
 		F483C5B626DE2BAE00D9D728 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483C5B526DE2BAE00D9D728 /* LockViewController.swift */; };
@@ -159,6 +161,8 @@
 		F47D509726DC7F45008AC2FF /* ASExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASExtension.swift; sourceTree = "<group>"; };
 		F47D509B26DC9051008AC2FF /* Genericity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genericity.swift; sourceTree = "<group>"; };
 		F47D50A226DCD389008AC2FF /* ReactiveDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveDemo.swift; sourceTree = "<group>"; };
+		F4802B2E2720156200F005A4 /* TextureLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLayoutViewController.swift; sourceTree = "<group>"; };
+		F4802B3027201C3B00F005A4 /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		F483C5AB26DE012000D9D728 /* HUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDViewController.swift; sourceTree = "<group>"; };
 		F483C5AD26DE08B000D9D728 /* DDLogWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLogWrapper.h; sourceTree = "<group>"; };
 		F483C5AE26DE08B000D9D728 /* DDLogWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLogWrapper.m; sourceTree = "<group>"; };
@@ -369,6 +373,7 @@
 				F483C5B026DE08E900D9D728 /* log */,
 				F4B7097326EC439100A28C20 /* RXEXTViewController.swift */,
 				F4D6EC3627004D7900317360 /* Test.swift */,
+				F4802B3027201C3B00F005A4 /* UIKitExtension.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				F476CE9026CF41FB001CAD97 /* TextureViewController.swift */,
+				F4802B2E2720156200F005A4 /* TextureLayoutViewController.swift */,
 				F4A4408326D357C600958FF0 /* AsynExtension.swift */,
 			);
 			path = Texture;
@@ -757,6 +763,7 @@
 				1859265F271F147000C4678B /* KVOViewController.swift in Sources */,
 				F4B7097226EB5F5600A28C20 /* RXExt.swift in Sources */,
 				F4D452A226E9F98900FF1F47 /* Signal_Loop.swift in Sources */,
+				F4802B2F2720156200F005A4 /* TextureLayoutViewController.swift in Sources */,
 				F4A4408426D357C600958FF0 /* AsynExtension.swift in Sources */,
 				F47648B626E0B819009D0A54 /* ThreadViewController.swift in Sources */,
 				F41AA3B626D8BA42000F8A2E /* LogExtension.swift in Sources */,
@@ -778,6 +785,7 @@
 				F476CE9126CF41FB001CAD97 /* TextureViewController.swift in Sources */,
 				F4D4529626E9F98900FF1F47 /* Signal_Dispatch.swift in Sources */,
 				F4D4528E26E9F98900FF1F47 /* ThreadPool.swift in Sources */,
+				F4802B3127201C3B00F005A4 /* UIKitExtension.swift in Sources */,
 				F45AB1FC26CBB1F7005EC202 /* BaseViewController.swift in Sources */,
 				F4B5859626E84DDF00455D73 /* UIButton+Ex.swift in Sources */,
 				F47C00D8271ED2D60081C0CF /* AlgorithmViewController.swift in Sources */,
