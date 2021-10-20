@@ -49,6 +49,7 @@
 		F47648B826E0D32A009D0A54 /* SecondNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B726E0D32A009D0A54 /* SecondNetViewController.swift */; };
 		F47648BA26E0D72A009D0A54 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47648B926E0D72A009D0A54 /* InfoViewController.swift */; };
 		F476CE9126CF41FB001CAD97 /* TextureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F476CE9026CF41FB001CAD97 /* TextureViewController.swift */; };
+		F47C00D8271ED2D60081C0CF /* AlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C00D7271ED2D60081C0CF /* AlgorithmViewController.swift */; };
 		F47D509826DC7F45008AC2FF /* ASExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D509726DC7F45008AC2FF /* ASExtension.swift */; };
 		F47D509C26DC9051008AC2FF /* Genericity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D509B26DC9051008AC2FF /* Genericity.swift */; };
 		F47D50A326DCD389008AC2FF /* ReactiveDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D50A226DCD389008AC2FF /* ReactiveDemo.swift */; };
@@ -154,6 +155,7 @@
 		F47648B726E0D32A009D0A54 /* SecondNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNetViewController.swift; sourceTree = "<group>"; };
 		F47648B926E0D72A009D0A54 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		F476CE9026CF41FB001CAD97 /* TextureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureViewController.swift; sourceTree = "<group>"; };
+		F47C00D7271ED2D60081C0CF /* AlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
 		F47D509726DC7F45008AC2FF /* ASExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASExtension.swift; sourceTree = "<group>"; };
 		F47D509B26DC9051008AC2FF /* Genericity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genericity.swift; sourceTree = "<group>"; };
 		F47D50A226DCD389008AC2FF /* ReactiveDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveDemo.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				18274AB5271C34FD000E9768 /* 面试 */,
+				F47C00D3271ED2990081C0CF /* 算法 */,
 				F4F82A2C271586DB008FD61A /* UI */,
 				F4F82A2527157476008FD61A /* AutoreleasePool */,
 				F4F82A1D27143382008FD61A /* 性能 */,
@@ -446,6 +449,14 @@
 				F47648B526E0B819009D0A54 /* ThreadViewController.swift */,
 			);
 			path = "多线程";
+			sourceTree = "<group>";
+		};
+		F47C00D3271ED2990081C0CF /* 算法 */ = {
+			isa = PBXGroup;
+			children = (
+				F47C00D7271ED2D60081C0CF /* AlgorithmViewController.swift */,
+			);
+			path = "算法";
 			sourceTree = "<group>";
 		};
 		F47D509A26DC9042008AC2FF /* Genericity */ = {
@@ -769,6 +780,7 @@
 				F4D4528E26E9F98900FF1F47 /* ThreadPool.swift in Sources */,
 				F45AB1FC26CBB1F7005EC202 /* BaseViewController.swift in Sources */,
 				F4B5859626E84DDF00455D73 /* UIButton+Ex.swift in Sources */,
+				F47C00D8271ED2D60081C0CF /* AlgorithmViewController.swift in Sources */,
 				F45AB1F926CBB0E1005EC202 /* SandBoxViewController.swift in Sources */,
 				F4D4529E26E9F98900FF1F47 /* Promise.swift in Sources */,
 				F45AB21026CCA759005EC202 /* ListValueSectionController.swift in Sources */,
