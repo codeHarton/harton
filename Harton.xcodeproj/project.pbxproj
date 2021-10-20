@@ -228,7 +228,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18274AB5271C34FD000E9768 /* 面试 */ = {
+		18274AB5271C34FD000E9768 /* interview */ = {
 			isa = PBXGroup;
 			children = (
 				18274AB6271C3512000E9768 /* InterviewViewController.swift */,
@@ -236,7 +236,7 @@
 				18274ABA271C38FA000E9768 /* Ojbect.cpp */,
 				1859265E271F147000C4678B /* KVOViewController.swift */,
 			);
-			path = "面试";
+			path = interview;
 			sourceTree = "<group>";
 		};
 		187D91B126DD132800C1D903 /* BigLotto */ = {
@@ -332,7 +332,7 @@
 		F45AB1F726CBB0AF005EC202 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				18274AB5271C34FD000E9768 /* 面试 */,
+				18274AB5271C34FD000E9768 /* interview */,
 				F47C00D3271ED2990081C0CF /* 算法 */,
 				F4F82A2C271586DB008FD61A /* UI */,
 				F4F82A2527157476008FD61A /* AutoreleasePool */,

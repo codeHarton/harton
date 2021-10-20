@@ -76,6 +76,15 @@ class FristNode: ASCellNode {
 }
 
 
+class NormalCell: ASCellNode {
+    override init() {
+        super.init()
+        
+    }
+    
+   
+}
+
 
 class ImageNode: ASCellNode {
     
