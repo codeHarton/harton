@@ -1,0 +1,6 @@
+framework module Dispaly {
+  umbrella header "Dispaly-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Dispaly",
+  "version": "0.1.0",
+  "summary": "Dispaly",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "http://10.191.80.217/wangshoudu/pod_test",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wangshoudu": "wangshoudu@yungengxin.com"
+  },
+  "source": {
+    "git": "http://10.191.80.217/wangshoudu/pod_test",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "Dispaly/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+
+    ]
+  },
+  "frameworks": "UIKit"
+}

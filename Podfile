@@ -4,6 +4,8 @@
 target 'Harton' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  
+  pod 'Dispaly', :path => 'Lib/Dispaly'
 
   # Pods for Harton
   pod 'Moya/RxSwift', '~> 14.0'
