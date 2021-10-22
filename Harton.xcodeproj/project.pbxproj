@@ -10,6 +10,9 @@
 		18274AB7271C3512000E9768 /* InterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18274AB6271C3512000E9768 /* InterviewViewController.swift */; };
 		18274AB9271C385D000E9768 /* ObjectMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 18274AB8271C385D000E9768 /* ObjectMain.m */; };
 		1859265F271F147000C4678B /* KVOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859265E271F147000C4678B /* KVOViewController.swift */; };
+		1859266127203B6900C4678B /* CategrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859266027203B6900C4678B /* CategrayViewController.swift */; };
+		1859266527206AF800C4678B /* AssoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859266427206AF800C4678B /* AssoViewController.swift */; };
+		1859266727218B8300C4678B /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859266627218B8300C4678B /* BlockViewController.swift */; };
 		187D91B326DD133D00C1D903 /* BigLottoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187D91B226DD133D00C1D903 /* BigLottoController.swift */; };
 		AB920695194E05E3BBB7B7F5 /* Pods_Harton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8FDEA4D3AA3B7BDB5D951C /* Pods_Harton.framework */; };
 		F41AA3B626D8BA42000F8A2E /* LogExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AA3B526D8BA42000F8A2E /* LogExtension.swift */; };
@@ -112,6 +115,9 @@
 		18274AB8271C385D000E9768 /* ObjectMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectMain.m; sourceTree = "<group>"; };
 		18274ABA271C38FA000E9768 /* Ojbect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ojbect.cpp; sourceTree = "<group>"; };
 		1859265E271F147000C4678B /* KVOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVOViewController.swift; sourceTree = "<group>"; };
+		1859266027203B6900C4678B /* CategrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategrayViewController.swift; sourceTree = "<group>"; };
+		1859266427206AF800C4678B /* AssoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssoViewController.swift; sourceTree = "<group>"; };
+		1859266627218B8300C4678B /* BlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
 		187D91B226DD133D00C1D903 /* BigLottoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLottoController.swift; sourceTree = "<group>"; };
 		34228D4CCE792FC5B9CD84EE /* Pods-Harton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Harton.debug.xcconfig"; path = "Target Support Files/Pods-Harton/Pods-Harton.debug.xcconfig"; sourceTree = "<group>"; };
 		3B8FDEA4D3AA3B7BDB5D951C /* Pods_Harton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Harton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +245,9 @@
 				18274AB8271C385D000E9768 /* ObjectMain.m */,
 				18274ABA271C38FA000E9768 /* Ojbect.cpp */,
 				1859265E271F147000C4678B /* KVOViewController.swift */,
+				1859266027203B6900C4678B /* CategrayViewController.swift */,
+				1859266427206AF800C4678B /* AssoViewController.swift */,
+				1859266627218B8300C4678B /* BlockViewController.swift */,
 			);
 			path = interview;
 			sourceTree = "<group>";
@@ -765,6 +774,7 @@
 				F4D452A226E9F98900FF1F47 /* Signal_Loop.swift in Sources */,
 				F4802B2F2720156200F005A4 /* TextureLayoutViewController.swift in Sources */,
 				F4A4408426D357C600958FF0 /* AsynExtension.swift in Sources */,
+				1859266127203B6900C4678B /* CategrayViewController.swift in Sources */,
 				F47648B626E0B819009D0A54 /* ThreadViewController.swift in Sources */,
 				F41AA3B626D8BA42000F8A2E /* LogExtension.swift in Sources */,
 				18274AB9271C385D000E9768 /* ObjectMain.m in Sources */,
@@ -806,6 +816,7 @@
 				F4B5858B26E7757100455D73 /* RegisterTextField.swift in Sources */,
 				F4D4529A26E9F98900FF1F47 /* Bag.swift in Sources */,
 				F4D4529B26E9F98900FF1F47 /* Signal_Single.swift in Sources */,
+				1859266527206AF800C4678B /* AssoViewController.swift in Sources */,
 				F45AB20026CBC234005EC202 /* DataBaseViewController.swift in Sources */,
 				F4B5859226E84C7600455D73 /* LoginButton.swift in Sources */,
 				F45AB20726CCA615005EC202 /* IGLViewController.swift in Sources */,
@@ -829,6 +840,7 @@
 				F4D452A626E9F98900FF1F47 /* Signal_Meta.swift in Sources */,
 				F41AA3BD26D8C833000F8A2E /* Response+HandyJson.swift in Sources */,
 				187D91B326DD133D00C1D903 /* BigLottoController.swift in Sources */,
+				1859266727218B8300C4678B /* BlockViewController.swift in Sources */,
 				F4D4529026E9F98900FF1F47 /* Signal_Materialize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

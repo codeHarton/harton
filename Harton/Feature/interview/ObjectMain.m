@@ -17,6 +17,14 @@ int _main(int argc,const char *argv[]){
         [NSObject class];
         
 //        objc_getClass(<#const char * _Nonnull name#>)
+        
+        
+        void (^block)(void) = ^{
+            NSLog(@"");
+        };
+        
+        
+        block();
     }
     return 0;
 }
