@@ -13,6 +13,8 @@
 		1859266127203B6900C4678B /* CategrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859266027203B6900C4678B /* CategrayViewController.swift */; };
 		1859266527206AF800C4678B /* AssoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859266427206AF800C4678B /* AssoViewController.swift */; };
 		1859266727218B8300C4678B /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859266627218B8300C4678B /* BlockViewController.swift */; };
+		1859266E27241EA300C4678B /* RuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859266D27241EA300C4678B /* RuntimeViewController.swift */; };
+		1859267127244B3E00C4678B /* ObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859267027244B3E00C4678B /* ObjectViewController.m */; };
 		187D91B326DD133D00C1D903 /* BigLottoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187D91B226DD133D00C1D903 /* BigLottoController.swift */; };
 		AB920695194E05E3BBB7B7F5 /* Pods_Harton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8FDEA4D3AA3B7BDB5D951C /* Pods_Harton.framework */; };
 		F41AA3B626D8BA42000F8A2E /* LogExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AA3B526D8BA42000F8A2E /* LogExtension.swift */; };
@@ -118,6 +120,9 @@
 		1859266027203B6900C4678B /* CategrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategrayViewController.swift; sourceTree = "<group>"; };
 		1859266427206AF800C4678B /* AssoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssoViewController.swift; sourceTree = "<group>"; };
 		1859266627218B8300C4678B /* BlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
+		1859266D27241EA300C4678B /* RuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeViewController.swift; sourceTree = "<group>"; };
+		1859266F27244B3E00C4678B /* ObjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectViewController.h; sourceTree = "<group>"; };
+		1859267027244B3E00C4678B /* ObjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectViewController.m; sourceTree = "<group>"; };
 		187D91B226DD133D00C1D903 /* BigLottoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLottoController.swift; sourceTree = "<group>"; };
 		34228D4CCE792FC5B9CD84EE /* Pods-Harton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Harton.debug.xcconfig"; path = "Target Support Files/Pods-Harton/Pods-Harton.debug.xcconfig"; sourceTree = "<group>"; };
 		3B8FDEA4D3AA3B7BDB5D951C /* Pods_Harton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Harton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +253,9 @@
 				1859266027203B6900C4678B /* CategrayViewController.swift */,
 				1859266427206AF800C4678B /* AssoViewController.swift */,
 				1859266627218B8300C4678B /* BlockViewController.swift */,
+				1859266D27241EA300C4678B /* RuntimeViewController.swift */,
+				1859266F27244B3E00C4678B /* ObjectViewController.h */,
+				1859267027244B3E00C4678B /* ObjectViewController.m */,
 			);
 			path = interview;
 			sourceTree = "<group>";
@@ -749,6 +757,7 @@
 				F483C5AF26DE08B000D9D728 /* DDLogWrapper.m in Sources */,
 				F4D452A326E9F98900FF1F47 /* Signal.swift in Sources */,
 				F4279AD926D76B9A001FA081 /* RxViewController.swift in Sources */,
+				1859267127244B3E00C4678B /* ObjectViewController.m in Sources */,
 				F41AA3C626D8C946000F8A2E /* HartonService.swift in Sources */,
 				F483C5B626DE2BAE00D9D728 /* LockViewController.swift in Sources */,
 				F45AB20F26CCA759005EC202 /* IGListSingleSectionController+Refinements.swift in Sources */,
@@ -828,6 +837,7 @@
 				F45AB1E426CBAA2E005EC202 /* AppDelegate.swift in Sources */,
 				F4B5858D26E77C8800455D73 /* LoginViewController.swift in Sources */,
 				F4F82A242715602F008FD61A /* TestViewController.swift in Sources */,
+				1859266E27241EA300C4678B /* RuntimeViewController.swift in Sources */,
 				F4D4529326E9F98900FF1F47 /* Signal_Mapping.swift in Sources */,
 				F4B5859426E84CDD00455D73 /* UIConstant.swift in Sources */,
 				F4D4529226E9F98900FF1F47 /* Signal_Merge.swift in Sources */,

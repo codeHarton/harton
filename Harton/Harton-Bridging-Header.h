@@ -8,3 +8,4 @@
 #import "MyProxy.h"
 
 #import "OCAutoReleasePoolViewController.h"
+#import "ObjectViewController.h"

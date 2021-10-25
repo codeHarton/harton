@@ -7,10 +7,13 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
-
+union{
+    char bits;
+} value ;
 int _main(int argc,const char *argv[]){
     @autoreleasepool {
         NSObject *obj = [[NSObject alloc] init];
+        BOOL name = value.bits & 0b00000001;
         
         Class objclass = object_getClass(obj);
         
