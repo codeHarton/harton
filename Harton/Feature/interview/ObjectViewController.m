@@ -50,8 +50,10 @@ union Data{
         NSLog(@"name is : %s,type is :%s",ivar_getName(ivar),ivar_getTypeEncoding(ivar));
     }
     
-    clasgetvar
+    unsigned int count1;
+    objc_property_t *p = class_copyPropertyList(ObjectPeople.class, &count1);
     
+    [[NSThread alloc] initWithTarget:self selector:@selector(text) object:nil];
     NSLog(@"%p,%p",obj1,obj2);
 }
 

@@ -11,9 +11,14 @@ import UIKit
  1.消息机制
  2.消息转发机制流程
  3.什么是runtime,平时项目中有用过吗
+ oc是一门动态性比较强的语音, 可以也行中修改很多, 动态修改类型 替换方法 (允许很多操作推迟到运行时)
  
    - 1.关联对象 (分类添加属性)
-   - 2.遍历类的所有成员变量(可以访问私有成员变量 ,修改tefield占位,字典转模型,自动归档,解档)
+   - 2.遍历类的所有成员变量(可以访问私有成员变量 ,修改tefield占位,字典转模型,自动归档,解档,)
+   - 3.交换方法实现
+   - 4.kvo
+   - 5.消息转发 解决方法找不到的问题
+   - 6.weak
  4.@synthesize和@dynamic
  
  
@@ -53,6 +58,7 @@ class RuntimeViewController: BaseViewController {
         isRich().log()
         isHandsme().log()
         isTall().log()
+        
         // Do any additional setup after loading the view.
     }
     

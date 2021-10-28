@@ -8,8 +8,7 @@
 #import "MyProxy.h"
 
 #import "OCAutoReleasePoolViewController.h"
-<<<<<<< HEAD
 #import "ObjectViewController.h"
-=======
 #import "MJPerson.h"
->>>>>>> d214c0d (---)
+
+#import "RunloopViewController.h"
