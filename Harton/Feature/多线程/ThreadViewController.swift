@@ -61,6 +61,15 @@ class ThreadViewController: BaseViewController {
 
         sisuo()
         concurrent_async()
+        
+        let operation = Operation()
+        let queue = OperationQueue()
+        queue.addBarrierBlock {
+            
+        }
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     

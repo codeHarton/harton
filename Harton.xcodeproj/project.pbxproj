@@ -63,6 +63,7 @@
 		F483C5AC26DE012000D9D728 /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483C5AB26DE012000D9D728 /* HUDViewController.swift */; };
 		F483C5AF26DE08B000D9D728 /* DDLogWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F483C5AE26DE08B000D9D728 /* DDLogWrapper.m */; };
 		F483C5B626DE2BAE00D9D728 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483C5B526DE2BAE00D9D728 /* LockViewController.swift */; };
+		F4924F292726440500C81293 /* MJPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F4924F282726440500C81293 /* MJPerson.m */; };
 		F4A4408426D357C600958FF0 /* AsynExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A4408326D357C600958FF0 /* AsynExtension.swift */; };
 		F4A4408B26D35DFF00958FF0 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A4408926D35DFF00958FF0 /* YYFPSLabel.m */; };
 		F4A4408C26D35DFF00958FF0 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A4408A26D35DFF00958FF0 /* YYWeakProxy.m */; };
@@ -178,6 +179,8 @@
 		F483C5AD26DE08B000D9D728 /* DDLogWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLogWrapper.h; sourceTree = "<group>"; };
 		F483C5AE26DE08B000D9D728 /* DDLogWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLogWrapper.m; sourceTree = "<group>"; };
 		F483C5B526DE2BAE00D9D728 /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
+		F4924F272726440500C81293 /* MJPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPerson.h; sourceTree = "<group>"; };
+		F4924F282726440500C81293 /* MJPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPerson.m; sourceTree = "<group>"; };
 		F4A4408326D357C600958FF0 /* AsynExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynExtension.swift; sourceTree = "<group>"; };
 		F4A4408626D35DFE00958FF0 /* Harton-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Harton-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4A4408726D35DFF00958FF0 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				1859266D27241EA300C4678B /* RuntimeViewController.swift */,
 				1859266F27244B3E00C4678B /* ObjectViewController.h */,
 				1859267027244B3E00C4678B /* ObjectViewController.m */,
+				F4924F272726440500C81293 /* MJPerson.h */,
+				F4924F282726440500C81293 /* MJPerson.m */,
 			);
 			path = interview;
 			sourceTree = "<group>";
@@ -794,6 +799,7 @@
 				F4EC893B26E202E200F7CC49 /* RunLoopViewController.swift in Sources */,
 				F41AA3BE26D8C833000F8A2E /* Response+ObjectMapper.swift in Sources */,
 				F4D452A526E9F98900FF1F47 /* Signal_Timing.swift in Sources */,
+				F4924F292726440500C81293 /* MJPerson.m in Sources */,
 				F41AA3CE26D8DE4B000F8A2E /* BaseViewModel.swift in Sources */,
 				F4D4529126E9F98900FF1F47 /* Signal_Reduce.swift in Sources */,
 				F4D452A026E9F98900FF1F47 /* Atomic.swift in Sources */,

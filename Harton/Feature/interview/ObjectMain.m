@@ -26,6 +26,15 @@ int _main(int argc,const char *argv[]){
             NSLog(@"");
         };
         
+        NSInvocationOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+            
+        }];
+        
+        operation.completionBlock = ^{
+            
+        };
+        
+        
         
         block();
     }
