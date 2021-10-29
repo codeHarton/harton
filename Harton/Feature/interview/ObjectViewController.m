@@ -19,6 +19,8 @@ union Data{
 {
     int _age;
 }
+@property (nonatomic,copy) NSString *name;
+
 - (void)test;
 @end
 
@@ -63,12 +65,48 @@ union Data{
 - (void)test;
 
 @property(nonatomic,retain)NSMutableArray *array;
+@property(nonatomic,retain)ObjectPeople  *person;
+
 
 @end
 
 @implementation ObjectViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.person = [ObjectPeople new];
+    self.view.backgroundColor = UIColor.whiteColor;
+    [self.person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+ 
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    self.person.name = @"100";
+
+    NSConditionLock *lock = [[NSConditionLock alloc] initWithCondition:1];
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(0, 0));
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 1 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(timer, ^{
+        
+    });
+    dispatch_resume(timer);
+}
+
+
+- (void)dealloc
+{
+    [self.person removeObserver:self forKeyPath:@"name"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    NSLog(@"%s,,%@",__func__,change);
+}
+
+- (void)test101
+{
     // 1.创建一个string字符串。
        NSString *string = @"github.com/pro648";
        NSString *stringB = string;
@@ -80,9 +118,7 @@ union Data{
        NSLog(@"Memory location of stringB = %p",stringB);
        NSLog(@"Memory location of stringCopy = %p",stringCopy);
        NSLog(@"Memory location of stringMutableCopy = %p",stringMutableCopy);
- 
 }
-
 - (void)run
 {
     NSLog(@"333 %@",NSThread.currentThread);
