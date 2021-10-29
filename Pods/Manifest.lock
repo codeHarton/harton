@@ -53,7 +53,11 @@ PODS:
   - libwebp/mux (1.2.0):
     - libwebp/demux
   - libwebp/webp (1.2.0)
+  - Mantle (2.1.6):
+    - Mantle/extobjc (= 2.1.6)
+  - Mantle/extobjc (2.1.6)
   - MBProgressHUD (1.2.0)
+  - MJExtension (3.3.0)
   - MJRefresh (3.7.2)
   - MMKV (1.2.10):
     - MMKVCore (~> 1.2.10)
@@ -211,7 +215,9 @@ DEPENDENCIES:
   - HandyJSON
   - IGListKit
   - Kingfisher
+  - Mantle
   - MBProgressHUD
+  - MJExtension
   - MJRefresh
   - MMKV
   - Moya/RxSwift (~> 14.0)
@@ -265,7 +271,9 @@ SPEC REPOS:
     - IGListKit
     - Kingfisher
     - libwebp
+    - Mantle
     - MBProgressHUD
+    - MJExtension
     - MJRefresh
     - MMKV
     - MMKVCore
@@ -322,7 +330,9 @@ SPEC CHECKSUMS:
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   libwebp: e90b9c01d99205d03b6bb8f2c8c415e5a4ef66f0
+  Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   MMKV: 76033b9ace2006623308910a3afcc0e25eba3140
   MMKVCore: b00e7a09ec77a1b916aef336eedd3b99ec249978
@@ -361,6 +371,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 802e092609e2a4ff3e905328a42804dca4267573
+PODFILE CHECKSUM: 44715d3bef2df8845df1ed0d964fa2f62ccc63ea
 
 COCOAPODS: 1.10.1

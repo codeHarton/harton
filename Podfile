@@ -61,6 +61,8 @@ pod 'UITableView+FDTemplateLayoutCell'
   
   #MJ
   pod 'MJRefresh'
+  pod 'MJExtension'
+  pod 'Mantle'
 
   #HUD
   pod 'SVProgressHUD'

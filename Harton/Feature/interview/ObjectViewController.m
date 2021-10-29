@@ -29,15 +29,67 @@ union Data{
 }
 
 
+
+
 @end
+
+@interface MyOperation : NSOperation
+@end
+
+@implementation MyOperation
+
+- (BOOL)isAsynchronous{
+
+    return YES;
+    
+}
+
+- (void)main
+{
+    NSLog(@"main %@",NSThread.currentThread);
+}
+
+- (void)start
+{
+    NSLog(@"start %@",NSThread.currentThread);
+
+}
+
+@end
+
+
 
 @interface ObjectViewController ()
 - (void)test;
+
+@property(nonatomic,retain)NSMutableArray *array;
+
 @end
 
 @implementation ObjectViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 1.创建一个string字符串。
+       NSString *string = @"github.com/pro648";
+       NSString *stringB = string;
+       NSString *stringCopy = [string copy];
+       NSMutableString *stringMutableCopy = [string mutableCopy];
+       
+       // 2.输出指针指向的内存地址。
+       NSLog(@"Memory location of string = %p",string);
+       NSLog(@"Memory location of stringB = %p",stringB);
+       NSLog(@"Memory location of stringCopy = %p",stringCopy);
+       NSLog(@"Memory location of stringMutableCopy = %p",stringMutableCopy);
+ 
+}
+
+- (void)run
+{
+    NSLog(@"333 %@",NSThread.currentThread);
+}
+
+- (void)_test
+{
     _age = 4;
     
     ObjectPeople *obj1 = ObjectPeople.new;
@@ -52,6 +104,7 @@ union Data{
     
     unsigned int count1;
     objc_property_t *p = class_copyPropertyList(ObjectPeople.class, &count1);
+
     
     [[NSThread alloc] initWithTarget:self selector:@selector(text) object:nil];
     NSLog(@"%p,%p",obj1,obj2);
